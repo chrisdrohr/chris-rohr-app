@@ -54,14 +54,14 @@ export const BuildingA = props => {
               d="M501,225c0-4.14,13.43-7.5,30-7.5s30,3.36,30,7.5"
               fill="none"
               stroke="#29abe2"
-              strokeMiterLimit="10"
+              strokeMiterlimit="10"
               strokeWidth="3"
             />
             <path
               d="M495,252c0-5,16.12-9,36-9s36,4,36,9"
               fill="none"
               stroke="#29abe2"
-              strokeMiterLimit="10"
+              strokeMiterlimit="10"
               strokeWidth="3"
             />
             <g>
@@ -82,7 +82,7 @@ export const BuildingA = props => {
                   d="M549,639H513l8.67-416c.18-8.92,4.15-16,9-16h.68c4.84,0,8.81,7.06,9,16Z"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                 />
               </g>
             </g>
@@ -90,14 +90,14 @@ export const BuildingA = props => {
               d="M561,225c0,4.14-13.43,7.5-30,7.5s-30-3.36-30-7.5"
               fill="none"
               stroke="#29abe2"
-              strokeMiterLimit="10"
+              strokeMiterlimit="10"
               strokeWidth="3"
             />
             <path
               d="M567,252c0,5-16.12,9-36,9s-36-4-36-9"
               fill="none"
               stroke="#29abe2"
-              strokeMiterLimit="10"
+              strokeMiterlimit="10"
               strokeWidth="3"
             />
           </g>
@@ -119,7 +119,7 @@ export const BuildingA = props => {
                 height="1440"
                 fill="none"
                 stroke="#000"
-                strokeMiterLimit="10"
+                strokeMiterlimit="10"
               />
             </g>
           </g>
@@ -140,7 +140,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -161,7 +161,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -182,7 +182,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -203,7 +203,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -224,7 +224,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -245,7 +245,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -266,7 +266,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -287,7 +287,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -308,7 +308,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -329,7 +329,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -350,7 +350,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -371,7 +371,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -392,7 +392,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -413,7 +413,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -434,7 +434,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -455,7 +455,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -476,7 +476,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -497,7 +497,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -518,7 +518,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -539,7 +539,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -560,7 +560,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -581,7 +581,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -602,7 +602,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -623,7 +623,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -644,7 +644,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -665,7 +665,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -686,7 +686,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -707,7 +707,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -728,7 +728,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -749,7 +749,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -770,7 +770,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -791,7 +791,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -812,7 +812,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -833,7 +833,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -854,7 +854,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -875,7 +875,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -896,7 +896,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -917,7 +917,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -938,7 +938,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -959,7 +959,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -980,7 +980,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1001,7 +1001,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1022,7 +1022,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1043,7 +1043,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1064,7 +1064,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1085,7 +1085,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1106,7 +1106,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1127,7 +1127,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1148,7 +1148,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1169,7 +1169,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1190,7 +1190,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1211,7 +1211,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1232,7 +1232,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1253,7 +1253,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1274,7 +1274,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1295,7 +1295,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1316,7 +1316,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1337,7 +1337,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1358,7 +1358,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1379,7 +1379,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1400,7 +1400,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1421,7 +1421,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1442,7 +1442,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1463,7 +1463,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1484,7 +1484,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1505,7 +1505,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1526,7 +1526,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1547,7 +1547,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1568,7 +1568,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1589,7 +1589,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1610,7 +1610,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1631,7 +1631,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1652,7 +1652,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1673,7 +1673,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1694,7 +1694,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1715,7 +1715,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1736,7 +1736,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1757,7 +1757,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1778,7 +1778,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1799,7 +1799,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1820,7 +1820,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1841,7 +1841,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1862,7 +1862,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1883,7 +1883,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1904,7 +1904,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1925,7 +1925,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1946,7 +1946,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1967,7 +1967,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -1988,7 +1988,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2009,7 +2009,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2030,7 +2030,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2051,7 +2051,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2072,7 +2072,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2093,7 +2093,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2114,7 +2114,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2135,7 +2135,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2156,7 +2156,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2177,7 +2177,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2198,7 +2198,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2219,7 +2219,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2240,7 +2240,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2261,7 +2261,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2282,7 +2282,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2303,7 +2303,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2324,7 +2324,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2345,7 +2345,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2366,7 +2366,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2387,7 +2387,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2408,7 +2408,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2429,7 +2429,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2450,7 +2450,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2471,7 +2471,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2492,7 +2492,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2513,7 +2513,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2534,7 +2534,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2555,7 +2555,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2576,7 +2576,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2597,7 +2597,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2618,7 +2618,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2639,7 +2639,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2660,7 +2660,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2681,7 +2681,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2702,7 +2702,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2723,7 +2723,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2744,7 +2744,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2765,7 +2765,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2786,7 +2786,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2807,7 +2807,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2828,7 +2828,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2849,7 +2849,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2870,7 +2870,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2891,7 +2891,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2912,7 +2912,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2933,7 +2933,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2954,7 +2954,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2975,7 +2975,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -2996,7 +2996,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3017,7 +3017,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3038,7 +3038,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3059,7 +3059,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3080,7 +3080,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3101,7 +3101,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3122,7 +3122,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3143,7 +3143,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3164,7 +3164,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3185,7 +3185,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3206,7 +3206,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3227,7 +3227,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3248,7 +3248,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3269,7 +3269,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3290,7 +3290,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3311,7 +3311,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3332,7 +3332,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3353,7 +3353,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3374,7 +3374,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3395,7 +3395,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3416,7 +3416,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3437,7 +3437,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3458,7 +3458,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3479,7 +3479,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3500,7 +3500,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3521,7 +3521,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3542,7 +3542,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3563,7 +3563,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3584,7 +3584,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3605,7 +3605,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3626,7 +3626,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3647,7 +3647,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3668,7 +3668,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3689,7 +3689,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3710,7 +3710,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3731,7 +3731,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3752,7 +3752,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3773,7 +3773,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3794,7 +3794,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3815,7 +3815,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3836,7 +3836,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3857,7 +3857,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3878,7 +3878,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3899,7 +3899,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3920,7 +3920,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3941,7 +3941,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3962,7 +3962,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -3983,7 +3983,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4004,7 +4004,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4025,7 +4025,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4046,7 +4046,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4067,7 +4067,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4088,7 +4088,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4109,7 +4109,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4130,7 +4130,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4151,7 +4151,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4172,7 +4172,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4193,7 +4193,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4214,7 +4214,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4235,7 +4235,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4256,7 +4256,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4277,7 +4277,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4298,7 +4298,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4319,7 +4319,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4340,7 +4340,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4361,7 +4361,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4382,7 +4382,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4403,7 +4403,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4424,7 +4424,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4445,7 +4445,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4466,7 +4466,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4487,7 +4487,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4508,7 +4508,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4529,7 +4529,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4550,7 +4550,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4571,7 +4571,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4592,7 +4592,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4613,7 +4613,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4634,7 +4634,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4655,7 +4655,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4676,7 +4676,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4697,7 +4697,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4718,7 +4718,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4739,7 +4739,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4760,7 +4760,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4781,7 +4781,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4802,7 +4802,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4823,7 +4823,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4844,7 +4844,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4865,7 +4865,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4886,7 +4886,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4907,7 +4907,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4928,7 +4928,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4949,7 +4949,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4970,7 +4970,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -4991,7 +4991,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5012,7 +5012,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5033,7 +5033,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5054,7 +5054,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5075,7 +5075,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5096,7 +5096,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5117,7 +5117,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5138,7 +5138,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5159,7 +5159,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5180,7 +5180,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5201,7 +5201,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5222,7 +5222,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5243,7 +5243,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5264,7 +5264,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5285,7 +5285,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5306,7 +5306,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5327,7 +5327,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5348,7 +5348,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5369,7 +5369,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5390,7 +5390,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5411,7 +5411,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5432,7 +5432,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5453,7 +5453,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5474,7 +5474,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5495,7 +5495,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5516,7 +5516,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5537,7 +5537,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5558,7 +5558,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5579,7 +5579,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5600,7 +5600,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5621,7 +5621,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5642,7 +5642,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5663,7 +5663,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5684,7 +5684,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5705,7 +5705,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5726,7 +5726,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5747,7 +5747,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5768,7 +5768,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5789,7 +5789,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5810,7 +5810,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5831,7 +5831,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5852,7 +5852,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5873,7 +5873,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5894,7 +5894,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5915,7 +5915,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5936,7 +5936,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5957,7 +5957,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5978,7 +5978,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -5999,7 +5999,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6020,7 +6020,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6041,7 +6041,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6062,7 +6062,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6083,7 +6083,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6104,7 +6104,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6125,7 +6125,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6146,7 +6146,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6167,7 +6167,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6188,7 +6188,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6209,7 +6209,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6230,7 +6230,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6251,7 +6251,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6272,7 +6272,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6293,7 +6293,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6314,7 +6314,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6335,7 +6335,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6356,7 +6356,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6377,7 +6377,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6398,7 +6398,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6419,7 +6419,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6440,7 +6440,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6461,7 +6461,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6482,7 +6482,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6503,7 +6503,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6524,7 +6524,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6545,7 +6545,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6566,7 +6566,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6587,7 +6587,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6608,7 +6608,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6629,7 +6629,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6650,7 +6650,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6671,7 +6671,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6692,7 +6692,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6713,7 +6713,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6734,7 +6734,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6755,7 +6755,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6776,7 +6776,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6797,7 +6797,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6818,7 +6818,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6839,7 +6839,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6860,7 +6860,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6881,7 +6881,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6902,7 +6902,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6923,7 +6923,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6944,7 +6944,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6965,7 +6965,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -6986,7 +6986,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7007,7 +7007,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7028,7 +7028,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7049,7 +7049,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7070,7 +7070,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7091,7 +7091,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7112,7 +7112,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7133,7 +7133,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7154,7 +7154,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7175,7 +7175,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7196,7 +7196,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7217,7 +7217,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7238,7 +7238,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7259,7 +7259,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7280,7 +7280,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7301,7 +7301,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7322,7 +7322,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7343,7 +7343,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7364,7 +7364,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7385,7 +7385,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7406,7 +7406,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7427,7 +7427,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7448,7 +7448,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7469,7 +7469,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7490,7 +7490,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7511,7 +7511,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7532,7 +7532,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7553,7 +7553,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7574,7 +7574,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7595,7 +7595,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7616,7 +7616,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7637,7 +7637,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7658,7 +7658,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7679,7 +7679,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7700,7 +7700,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7721,7 +7721,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7742,7 +7742,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7763,7 +7763,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7784,7 +7784,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7805,7 +7805,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7826,7 +7826,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7847,7 +7847,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7868,7 +7868,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7889,7 +7889,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7910,7 +7910,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7931,7 +7931,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7952,7 +7952,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7973,7 +7973,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -7994,7 +7994,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -8015,7 +8015,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -8036,7 +8036,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -8057,7 +8057,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -8078,7 +8078,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -8099,7 +8099,7 @@ export const BuildingA = props => {
                   height="54"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -8122,7 +8122,7 @@ export const BuildingA = props => {
                   height="9"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                 />
               </g>
             </g>
@@ -8142,7 +8142,7 @@ export const BuildingA = props => {
                   height="9"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                 />
               </g>
             </g>
@@ -8162,7 +8162,7 @@ export const BuildingA = props => {
                   height="9"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                 />
               </g>
             </g>
@@ -8183,7 +8183,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8203,7 +8203,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8223,7 +8223,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8245,7 +8245,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8265,7 +8265,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8285,7 +8285,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8306,7 +8306,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8326,7 +8326,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8346,7 +8346,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8369,7 +8369,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8389,7 +8389,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8409,7 +8409,7 @@ export const BuildingA = props => {
                     height="9"
                     fill="none"
                     stroke="#000"
-                    strokeMiterLimit="10"
+                    strokeMiterlimit="10"
                   />
                 </g>
               </g>
@@ -8430,7 +8430,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8450,7 +8450,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8470,7 +8470,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8492,7 +8492,7 @@ export const BuildingA = props => {
                   height="9"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                 />
               </g>
             </g>
@@ -8522,7 +8522,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8542,7 +8542,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8562,7 +8562,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8583,7 +8583,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8609,7 +8609,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8635,7 +8635,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8663,7 +8663,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8689,7 +8689,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8715,7 +8715,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8742,7 +8742,7 @@ export const BuildingA = props => {
                           height="9"
                           fill="none"
                           stroke="#000"
-                          strokeMiterLimit="10"
+                          strokeMiterlimit="10"
                         />
                       </g>
                     </g>
@@ -8768,7 +8768,7 @@ export const BuildingA = props => {
                           height="9"
                           fill="none"
                           stroke="#000"
-                          strokeMiterLimit="10"
+                          strokeMiterlimit="10"
                         />
                       </g>
                     </g>
@@ -8794,7 +8794,7 @@ export const BuildingA = props => {
                           height="9"
                           fill="none"
                           stroke="#000"
-                          strokeMiterLimit="10"
+                          strokeMiterlimit="10"
                         />
                       </g>
                     </g>
@@ -8823,7 +8823,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8849,7 +8849,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8875,7 +8875,7 @@ export const BuildingA = props => {
                         height="9"
                         fill="none"
                         stroke="#000"
-                        strokeMiterLimit="10"
+                        strokeMiterlimit="10"
                       />
                     </g>
                   </g>
@@ -8902,7 +8902,7 @@ export const BuildingA = props => {
                           height="9"
                           fill="none"
                           stroke="#000"
-                          strokeMiterLimit="10"
+                          strokeMiterlimit="10"
                         />
                       </g>
                     </g>
@@ -8928,7 +8928,7 @@ export const BuildingA = props => {
                           height="9"
                           fill="none"
                           stroke="#000"
-                          strokeMiterLimit="10"
+                          strokeMiterlimit="10"
                         />
                       </g>
                     </g>
@@ -8954,7 +8954,7 @@ export const BuildingA = props => {
                           height="9"
                           fill="none"
                           stroke="#000"
-                          strokeMiterLimit="10"
+                          strokeMiterlimit="10"
                         />
                       </g>
                     </g>
@@ -8976,7 +8976,7 @@ export const BuildingA = props => {
                       height="9"
                       fill="none"
                       stroke="#000"
-                      strokeMiterLimit="10"
+                      strokeMiterlimit="10"
                     />
                   </g>
                 </g>
@@ -8991,7 +8991,7 @@ export const BuildingA = props => {
               height="144"
               fill="#1a1a1a"
               stroke="#000"
-              strokeMiterLimit="10"
+              strokeMiterlimit="10"
             />
             <g>
               <use
@@ -9009,7 +9009,7 @@ export const BuildingA = props => {
                   height="135"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -9030,7 +9030,7 @@ export const BuildingA = props => {
                   height="135"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -9051,7 +9051,7 @@ export const BuildingA = props => {
                   height="135"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                   strokeWidth="2"
                 />
               </g>
@@ -9074,7 +9074,7 @@ export const BuildingA = props => {
                   height="18"
                   fill="none"
                   stroke="#000"
-                  strokeMiterLimit="10"
+                  strokeMiterlimit="10"
                 />
               </g>
             </g>
