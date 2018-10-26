@@ -1,7 +1,7 @@
 import React from 'react';
 import { profile } from '../Constants';
-import * as Core from '@material-ui/core';
-import * as Icon from '@material-ui/icons';
+import { Button, Fade, Typography, withStyles } from '@material-ui/core';
+import { KeyboardArrowDown } from '@material-ui/icons';
 import { scrollIntoView } from '../Functions';
 import Logo from '../logo';
 const styles = ({
@@ -16,7 +16,7 @@ const styles = ({
   continueButton: {
     backgroundColor: 'rgba(3, 169, 244, 0.3)',
     color: 'white',
-   
+
     transition: create(['transform'], duration.short, easing.easeInOut),
     transform: 'scale(1)',
     '&:hover': {
@@ -26,7 +26,7 @@ const styles = ({
   },
   continueButtonContainer: {
     position: 'absolute',
-    bottom: '15vh',
+    bottom: '15vh'
   },
   headerContainer: {
     maxWidth: 800,
@@ -61,13 +61,13 @@ class Header extends React.Component {
       <div id={'header'} className={props.classes.headerContainer}>
         <div>
           <Logo show={state.show} />
-          <Core.Fade in={state.show} style={{ transitionDelay: 2000 }}>
+          <Fade in={state.show} style={{ transitionDelay: 2000 }}>
             <div
               style={{
                 padding: '0 32px',
                 margin: 'auto'
               }}>
-              <Core.Typography
+              <Typography
                 align={isMobile ? 'center' : 'left'}
                 style={{
                   color: 'white',
@@ -75,9 +75,9 @@ class Header extends React.Component {
                 }}
                 variant={isMobile ? 'h6' : 'h4'}>
                 {profile.profession}
-              </Core.Typography>
+              </Typography>
 
-              <Core.Typography
+              <Typography
                 align={isMobile ? 'center' : 'left'}
                 style={{
                   color: 'white',
@@ -85,24 +85,22 @@ class Header extends React.Component {
                 }}
                 variant={isMobile ? 'body1' : 'subtitle1'}>
                 {profile.location}
-              </Core.Typography>
+              </Typography>
             </div>
-          </Core.Fade>
+          </Fade>
         </div>
-        <Core.Fade in={state.show} style={{ transitionDelay: 2300 }}>
-            
-    <div className={props.classes.continueButtonContainer}>
-          <Core.Button
-            className={props.classes.continueButton}
-            onClick={() => scrollIntoView('about')}
-            variant={'fab'}>
-            <Icon.KeyboardArrowDown />
-          </Core.Button>
+        <Fade in={state.show} style={{ transitionDelay: 2300 }}>
+          <div className={props.classes.continueButtonContainer}>
+            <Button
+              className={props.classes.continueButton}
+              onClick={() => scrollIntoView('about')}
+              variant={'fab'}>
+              <KeyboardArrowDown />
+            </Button>
           </div>
-          </Core.Fade>
-       
+        </Fade>
       </div>
     );
   }
 }
-export default Core.withStyles(styles)(Header);
+export default withStyles(styles)(Header);

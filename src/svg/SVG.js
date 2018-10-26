@@ -25,6 +25,8 @@ import stripe from "./stripe.svg";
 import trello from "./trello.svg";
 import twilio from "./twilio.svg";
 import youtube from "./youtube.svg";
+import linkedIn from "./LinkedIn";
+import dinnerParty from './DinnerParty';
 
 export const AdobeAI = adobeAI;
 export const AdobeXD = adobeXD;
@@ -53,3 +55,5 @@ export const Stripe = stripe;
 export const Trello = trello;
 export const Twilio = twilio;
 export const YouTube = youtube;
+export const LinkedIn = linkedIn;
+export const DinnerParty = dinnerParty;
