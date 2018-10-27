@@ -171,7 +171,7 @@ class About extends React.Component {
         <CardContent>
           <Grid container spacing={16} justify={'center'}>
             {hobbiesInterests.map(item => (
-              <Grid key={item.name} item sm={4} xs={6}>
+              <Grid key={item.name} item md={4} sm={6} xs={6}>
                 <div>
                   <Avatar className={props.classes.hobbieInterestAvatar}>
                     {item.svg}
@@ -211,6 +211,7 @@ class About extends React.Component {
     const isMobile = props.width === 'xs';
     return (
       <Container id={'about'} className={props.classes.aboutContainer}>
+ 
         <Subheader visible={props.visible}>About</Subheader>
         <Snack
           onClose={this.handleClose}
@@ -264,7 +265,7 @@ class About extends React.Component {
                     </React.Fragment>
                   }
                 />
-
+                <div id={'scrollTo'}/>
                 <Hidden smUp>
                   <Typography align={'left'} paragraph variant={'subtitle1'}>
                     {profile.summary[1]}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { profile } from '../Constants';
-import { Button, Fade, Typography, withStyles } from '@material-ui/core';
+import { Fade, IconButton, Typography, withStyles } from '@material-ui/core';
 import { KeyboardArrowDown } from '@material-ui/icons';
 import { scrollIntoView } from '../Functions';
 import Logo from '../logo';
@@ -14,14 +14,14 @@ const styles = ({
   zIndex
 }) => ({
   continueButton: {
-    backgroundColor: 'rgba(3, 169, 244, 0.3)',
+    // backgroundColor: 'rgba(3, 169, 244, 0.3)',
     color: 'white',
 
     transition: create(['transform'], duration.short, easing.easeInOut),
     transform: 'scale(1)',
     '&:hover': {
-      backgroundColor: palette.primary.main,
-      transform: 'scale(1.2)'
+      // backgroundColor: palette.primary.main,
+      transform: 'scale(1.5)'
     }
   },
   continueButtonContainer: {
@@ -91,12 +91,11 @@ class Header extends React.Component {
         </div>
         <Fade in={state.show} style={{ transitionDelay: 2300 }}>
           <div className={props.classes.continueButtonContainer}>
-            <Button
+            <IconButton
               className={props.classes.continueButton}
-              onClick={() => scrollIntoView('about')}
-              variant={'fab'}>
+              onClick={() => scrollIntoView('scrollTo')}>
               <KeyboardArrowDown />
-            </Button>
+            </IconButton>
           </div>
         </Fade>
       </div>

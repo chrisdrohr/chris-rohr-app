@@ -12,7 +12,8 @@ import {
   Work,
 } from '@material-ui/icons';
 import * as SVG from "./SVG/SVG";
-
+export const dev = process.env.NODE_ENV === "development";
+export const prod = process.env.NODE_ENV === "production";
 export const name = "Chris Rohr";
 export const profession = "Web & Mobile Developer";
 export const email = {

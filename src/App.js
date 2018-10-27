@@ -4,6 +4,7 @@ import { lightBlue, pink } from '@material-ui/core/colors';
 import { CssBaseline, withWidth } from '@material-ui/core';
 import Profile from './Profile';
 import {database} from './firebase';
+import {prod} from './Constants';
 import './App.css';
 import Background from './Background';
 const theme = createMuiTheme({
@@ -19,7 +20,9 @@ const theme = createMuiTheme({
 
 class App extends Component {
   componentDidMount() {
-    this.addVisitor();
+    if (prod) {
+       this.addVisitor();
+    }
   }
   addVisitor = async () => {
       const data = {
