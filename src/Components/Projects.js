@@ -50,7 +50,8 @@ class Projects extends Component {
   render() {
     const props = this.props;
     return (
-      <Container id={"projects"}>
+      <Container>
+      <div id={"projects"}/>
         <Subheader visible={props.visible}>Projects</Subheader>
         <Core.Fade in={true}>
           <Core.Grid container spacing={16}>

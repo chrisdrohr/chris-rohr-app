@@ -35,7 +35,8 @@ const styles = ({
 
 const Experience = props => {
   return (
-    <Container id={'experience'}>
+    <Container>
+    <div id={'experience'}/>
       <Subheader visible={props.visible}>Experience</Subheader>
       <Fade in={props.visible}>
         <Grid container spacing={16}>

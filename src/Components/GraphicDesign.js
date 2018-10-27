@@ -43,6 +43,7 @@ const GraphicDesign = (props) => {
     ];
     return (
       <Container id={'graphicDesign'}>
+      <div id={'graphicDesign'}/>
         <Subheader visible={props.visible}>Graphic Design</Subheader>
         <Fade in={props.visible}>
           <Grid container spacing={8}>

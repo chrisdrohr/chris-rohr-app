@@ -38,9 +38,9 @@ export const resume = {
   url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/Resume.pdf?alt=media&token=133d03e7-3809-41e5-acb6-80e7e022cab6"
 };
 export const code = {
-  info: "View Code at CodeSandbox",
+  info: "View Code at GitHub",
   title: "View Code",
-  url: "https://codesandbox.io/s/kkyr7257z7"
+  url: "https://github.com/chrisdrohr/chris-rohr-app"
 };
 export const music = [
   "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/245120331&color=%2303a9f4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true",

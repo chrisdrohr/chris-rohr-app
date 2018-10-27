@@ -210,8 +210,8 @@ class About extends React.Component {
     const state = this.state;
     const isMobile = props.width === 'xs';
     return (
-      <Container id={'about'} className={props.classes.aboutContainer}>
- 
+      <Container className={props.classes.aboutContainer}>
+          <div id={'about'}/>
         <Subheader visible={props.visible}>About</Subheader>
         <Snack
           onClose={this.handleClose}

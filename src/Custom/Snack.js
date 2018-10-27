@@ -11,7 +11,7 @@ class Snack extends Component {
  
   render() {
     const props = this.props;
-    const isSmall = props.width === 'sm';
+    const isSmall = props.width === 'sm' || props.width === 'xs';
 
     return (
       <div>

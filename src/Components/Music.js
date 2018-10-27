@@ -16,7 +16,8 @@ const styles = ({
 
 const Music = props => {
   return (
-    <Container id={'music'}>
+    <Container>
+    <div id={'music'}/>
       <Subheader visible={props.visible}>Music</Subheader>
       <Fade in={props.visible}>
         <Grid container spacing={16}>

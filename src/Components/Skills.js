@@ -58,7 +58,8 @@ class Skills extends Component {
   render() {
     const props = this.props;
     return (
-      <Container id={'skills'}>
+      <Container>
+      <div id={'skills'}/>
         <Subheader visible={props.visible}>Skills</Subheader>
         <Fade in={props.visible}>
           <Grid container spacing={16} justify={'center'}>
