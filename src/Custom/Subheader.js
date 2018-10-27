@@ -1,5 +1,5 @@
 import {withStyles} from "@material-ui/core";
-import * as Core from "@material-ui/core";
+import {Divider, ListSubheader} from "@material-ui/core";
 import {font} from "../Constants";
 import React from "react";
 
@@ -13,10 +13,13 @@ const styles = ({
                     zIndex
                 }) => ({
     content: {
+        willChange: 'transform, opacity',
         transition: create(['opacity', 'transform'], duration.enteringScreen, easing.easeIn),
     },
     divider: {
-        transition: create('width', duration.enteringScreen, easing.sharp),
+        willChange: 'transform',
+        transition: create('transform', duration.enteringScreen, easing.sharp),
+        width: 100,
         backgroundColor: palette.secondary.main,
         height: 5,
         margin: 'auto',
@@ -26,7 +29,7 @@ const styles = ({
 
 });
 const Subheader = props => (
-    <Core.ListSubheader
+    <ListSubheader
         disableSticky
         style={{
             lineHeight: '32px',
@@ -43,11 +46,11 @@ const Subheader = props => (
             }}>
         {props.children}
         </div>
-        <Core.Divider
+        <Divider
             style={{
-                width: props.visible ? 100 : 0
+                transform: props.visible ? 'rotateY(0deg)' : 'rotateY(90deg)'
             }}
             className={props.classes.divider}/>
-    </Core.ListSubheader>
+    </ListSubheader>
 );
 export default withStyles(styles)(Subheader);

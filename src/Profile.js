@@ -43,7 +43,6 @@ const styles = ({
 
   container: {
     maxWidth: 1000,
-    // paddingBottom: "10vh",
     margin: 'auto',
     [breakpoints.down('xs')]: {}
   },
@@ -56,10 +55,16 @@ const styles = ({
   menuButton: {
     transition: create('transform', duration.short, easing.easeInOut),
     position: 'fixed',
-    top: 16,
-    left: 16,
     zIndex: zIndex.drawer + 1000,
-    backgroundColor: palette.common.white
+    backgroundColor: palette.common.white,
+    [breakpoints.up('sm')]: {
+      top: 16,
+      left: 16,
+    },
+    [breakpoints.down('xs')]: {
+      bottom: 32,
+      left: 16,
+    }
   },
   topButton: {
     transition: create('transform', duration.short, easing.sharp),
@@ -69,7 +74,7 @@ const styles = ({
     [breakpoints.down('sm')]: {
       bottom: 32,
       right: 16
-    }
+    },
   }
 });
 const DrawerHandler = toRenderProps(withState('open', 'update', false));
@@ -80,6 +85,9 @@ class Profile extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+
+  }
   onClick = async (id, close) => {
     const element = await document.getElementById(id);
     if (element !== null) {
@@ -120,11 +128,15 @@ class Profile extends Component {
       <DrawerHandler>
         {({ open, update }) => (
           <div>
-            <div>
+            <div 
+            // style={{
+            //   transform: open ? 'translateX(140px)' : 'translateX(0px)'
+            // }}
+            className={props.classes.menuButtonContainer}>
               <Button
                 className={props.classes.menuButton}
                 style={{
-                  transform: open ? 'translateX(140px)' : 'translateX(0px)'
+                  transform: open ? 'translateX(162px)' : 'translateX(0px)'
                 }}
                 onClick={() => update(!open)}
                 variant={'fab'}>
@@ -185,7 +197,7 @@ class Profile extends Component {
     const Visible = props => (
       <VisibilitySensor
         offset={props.offset}
-        minTopValue={props.minTop ? props.minTop : 100}
+        minTopValue={props.minTop ? props.minTop : 50}
         partialVisibility={true}>
         {props.children}
       </VisibilitySensor>
@@ -195,7 +207,7 @@ class Profile extends Component {
         {({ isVisible }) => <Header width={props.width} visible={isVisible} />}
       </Visible>,
       <Visible key={1}>
-        {({ isVisible }) => <About visible={isVisible} />}
+        {({ isVisible }) => <About width={props.width} visible={isVisible} />}
       </Visible>,
       <Visible key={2}>
         {({ isVisible }) => <Skills visible={isVisible} />}

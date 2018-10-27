@@ -1,44 +1,45 @@
-import React, {Component, Fragment} from 'react';
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
-import { lightBlue, pink } from "@material-ui/core/colors";
-import {CssBaseline, withWidth} from '@material-ui/core';
-import Profile from "./Profile";
+import React, { Component } from 'react';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
+import { lightBlue, pink } from '@material-ui/core/colors';
+import { CssBaseline, withWidth } from '@material-ui/core';
+import Profile from './Profile';
+import {database} from './firebase';
 import './App.css';
-import SnackMaker from "./SnackMaker";
-import Background from "./Background";
+import Background from './Background';
 const theme = createMuiTheme({
-    palette: {
-        primary: lightBlue,
-        secondary: pink
-    },
-    typography: {
-        fontFamily: "Open Sans, Helvetica, Arial, sans-serif",
-        useNextVariants: true,
-    }
+  palette: {
+    primary: lightBlue,
+    secondary: pink
+  },
+  typography: {
+    fontFamily: 'Open Sans, Helvetica, Arial, sans-serif',
+    useNextVariants: true
+  }
 });
 
-
 class App extends Component {
-    componentDidMount() {
-    }
+  componentDidMount() {
+    this.addVisitor();
+  }
+  addVisitor = async () => {
+      const data = {
+        device: window.navigator.platform,
+        date: new Date(Date.now()).toDateString(),
+      }
+      await database().ref('visits').push(data);
+  }
+
   render() {
-      return (
-        <React.Fragment>
-            <CssBaseline/>
+    return (
+      <React.Fragment>
+        <CssBaseline />
         <MuiThemeProvider theme={theme}>
-            <div
-                className="App">
-                <SnackMaker>
-                    {(functions) => (
-                        <Fragment>
-                            <Background {...this.props}/>
-                            <Profile {...functions} {...this.props}/>
-                        </Fragment>
-                    )}
-                </SnackMaker>
-            </div>
+          <main className="App">
+              <Background {...this.props} />
+              <Profile {...this.props} />
+          </main>
         </MuiThemeProvider>
-        </React.Fragment>
+      </React.Fragment>
     );
   }
 }

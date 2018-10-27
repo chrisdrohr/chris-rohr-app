@@ -13,6 +13,8 @@ const styles = ({
     backgroundColor: "#112",
     position: "absolute",
     zIndex: -1,
+    opacity: 0,
+    transition: create('opacity', duration.complex, easing.easeIn),
   },
   city: {
     transform: "translate(50%, 40%)"
@@ -345,13 +347,19 @@ class Background extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+    
     };
   }
-
+componentDidMount() {
+  const element = document.getElementById('background');
+  if (element !== null) {
+    setTimeout(() => element.style.opacity = 1, 300);
+  }
+}
   render() {
     const { classes } = this.props;
     return (
-      <div className={classes.container}>
+      <div id={'background'} className={classes.container}>
         <svg className={classes.svg}>
           <Sky {...this.props}/>
         </svg>

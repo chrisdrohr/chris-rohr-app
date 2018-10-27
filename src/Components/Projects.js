@@ -32,6 +32,10 @@ const styles = ({
   image: {
     height: 400
   },
+  moreTitle: {
+    color: palette.primary.main,
+    paddingBottom: 8,
+  },
   subheader: {
     color: palette.primary.main
   },
@@ -39,6 +43,7 @@ const styles = ({
     color: palette.secondary.main,
     paddingBottom: 8,
   },
+ 
 });
 
 class Projects extends Component {
@@ -92,7 +97,7 @@ class Projects extends Component {
                         <Core.CardHeader
                           style={{ alignItems: "flex-start" }}
                           classes={{
-                            title: props.classes.title,
+                            title: props.classes.moreTitle,
                             // subheader: props.classes.subheader
                           }}
                           action={

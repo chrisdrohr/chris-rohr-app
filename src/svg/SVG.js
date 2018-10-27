@@ -27,7 +27,15 @@ import twilio from "./twilio.svg";
 import youtube from "./youtube.svg";
 import linkedIn from "./LinkedIn";
 import dinnerParty from './DinnerParty';
+import deathStar from './DeathStar';
+import wrench from './Wrench';
+import gamePad from './GamePad';
+import gitHubComponent from './GitHub';
 
+export const GitHubComponent = gitHubComponent;
+export const Wrench = wrench;
+export const DeathStar = deathStar;
+export const GamePad = gamePad;
 export const AdobeAI = adobeAI;
 export const AdobeXD = adobeXD;
 export const AdobePremiere = premiereCC;

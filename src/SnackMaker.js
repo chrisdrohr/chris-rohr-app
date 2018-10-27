@@ -25,16 +25,17 @@ class SnackMaker extends Component {
     }
     this.setState({ open: false });
   };
+  functions = {
+    handleOpen: this.handleOpen,
+    handleClose: this.handleClose
+  };
   render() {
     const props = this.props;
     const state = this.state;
-    const functions = {
-      handleOpen: this.handleOpen,
-      handleClose: this.handleClose
-    };
+
     return (
       <div>
-        {props.children(functions)}
+        {props.children(this.functions)}
         <Snackbar
           anchorOrigin={{
             vertical: "bottom",

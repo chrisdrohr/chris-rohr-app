@@ -1,22 +1,29 @@
 import Subheader from '../Custom/Subheader';
 import {
   Avatar,
-  Button, 
+  Card,
+  CardContent,
   CardHeader,
-  Fade, 
-  Grid, 
+  Collapse,
+  Divider,
+  Fade,
+  Grid,
   Hidden,
-  Tooltip,
-  Typography, 
+  LinearProgress,
+  List,
+  ListItem,
+  ListItemText,
+  Typography,
   withStyles
 } from '@material-ui/core';
-import { profile } from '../Constants';
-import {Description, Email} from '@material-ui/icons';
-import { LinkedIn } from '../SVG/SVG';
-import { copyText } from '../Functions';
+import { profile, hobbiesInterests, personality } from '../Constants';
+import { KeyboardArrowDown } from '@material-ui/icons';
+import Snack from '../Custom/Snack';
+import Links from './Links';
 import Container from '../Custom/Container';
 import React from 'react';
-
+import { toRenderProps, withState } from 'recompose';
+const CollapseState = toRenderProps(withState('show', 'update', false));
 const styles = ({
   breakpoints,
   palette,
@@ -31,7 +38,6 @@ const styles = ({
     width: 200,
     boxShadow: shadows[6],
     borderRadius: '4px 14px',
-    marginBottom: 16,
     margin: 'auto',
     filter: 'grayscale(100%)',
     transition: create('filter', duration.short, easing.easeOut),
@@ -39,125 +45,244 @@ const styles = ({
       filter: 'none'
     },
     [breakpoints.down('xs')]: {
-      height: 150,
-      width: 100
+      height: 120,
+      width: 120
     }
-  },
-  aboutButton: {
-    width: '100%',
-    display: 'flex',
-    padding: 5
   },
   aboutContainer: {
     minHeight: '50vh'
   },
-  linkedInIcon: {
-    marginRight: 5,
-    fill: palette.primary.main
+  hobbieInterestAvatar: {
+    backgroundColor: palette.primary.main,
+    height: 100,
+    width: 100,
+    boxShadow: shadows[2],
+    borderRadius: 4,
+    margin: 'auto'
+  },
+
+  personalityIcon: {
+    willChange: 'transform',
+    transition: create('transform', duration.short, easing.sharp)
+  },
+  progress: {
+    marginTop: 4,
+    borderRadius: 8
+  },
+  title: {
+    color: palette.secondary.main
   }
 });
-const About = props => {
-  const Actions = () => (
-    <Grid container spacing={8}>
-      {[
-        {
-          title: profile.resume.info,
-          color: 'primary',
-          component: 'a',
-          href: profile.resume.url,
-          target: '_blank',
-          style: { color: 'white' },
-          variant: 'contained',
-          icon: <Description style={{ marginRight: 5 }} />,
-          label: profile.resume.title
-        },
-        {
-          title: profile.linkedIn.info,
-          color: 'primary',
-          component: 'a',
-          href: profile.linkedIn.link,
-          target: '_blank',
+class About extends React.Component {
+  state = {
+    open: false,
+    message: ''
+  };
+  handleOpen = message => {
+    this.setState({ open: true, message });
+  };
 
-          variant: 'outlined',
-          icon: (
-            <LinkedIn
-              style={{ marginRight: 5 }}
-              className={props.classes.linkedInIcon}
-            />
-          ),
-          label: profile.linkedIn.title
-        },
-        {
-          title: profile.email.info,
-          color: 'primary',
-          onClick: async () => {
-            await copyText(profile.email.email);
-            return props.handleOpen(profile.email.message);
-          },
-          variant: 'outlined',
-          icon: <Email style={{ marginRight: 5 }} color={'primary'} />,
-          label: profile.email.title
-        }
-      ].map((button, i) => (
-        <Grid key={i} item sm={4} xs={i === 0 ? 12 : 6}>
-          <Tooltip key={button.title} title={button.title}>
-            <Button
-              className={props.classes.aboutButton}
-              onClick={button.onClick}
-              color={button.color}
-              component={button.component}
-              href={button.href}
-              target={button.target}
-              style={button.style}
-              variant={button.variant}>
-              {button.icon}
-              {button.label}
-            </Button>
-          </Tooltip>
-        </Grid>
-      ))}
-    </Grid>
-  );
-  return (
-    <Container id={'about'} className={props.classes.aboutContainer}>
-      <Subheader visible={props.visible}>About</Subheader>
-      <Fade in={props.visible}>
-        <div>
-          <CardHeader
-            avatar={
-              <Avatar
-                className={props.classes.avatar}
-                src={profile.photoURL}
-              />
-            }
-            disableTypography
-            title={
-              <Typography align={'left'} paragraph variant={'h6'}>
-                {profile.summary[0]}
-              </Typography>
-            }
-            subheader={
-              <React.Fragment>
-                <Hidden xsDown>
+  handleClose = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    this.setState({ open: false });
+  };
+  Personality = () => {
+    const props = this.props;
+    return (
+      <Card>
+        <CardHeader
+          classes={{
+            title: props.classes.title
+          }}
+          title={personality.title}
+        />
+        <Divider />
+        <CardContent>
+          <Typography variant={'caption'}>{personality.subtitle}</Typography>
+        </CardContent>
+        <List>
+          {personality.results.map(result => (
+            <CollapseState key={result.title}>
+              {({ show, update }) => (
+                <React.Fragment>
+                  <ListItem
+                    button
+                    onClick={() => update(!show)}
+                    key={result.title}>
+                    <ListItemText
+                      disableTypography
+                      primary={result.title}
+                      secondary={
+                        <div>
+                          <Typography variant={'body2'}>
+                            {result.subtitle}
+                          </Typography>
+                          <LinearProgress
+                            className={props.classes.progress}
+                            color={result.score > 30 ? 'secondary' : 'primary'}
+                            variant={'determinate'}
+                            value={(result.score * 100) / 60}
+                          />
+                        </div>
+                      }
+                    />
+                    <KeyboardArrowDown
+                      className={props.classes.personalityIcon}
+                      color={'action'}
+                      style={{
+                        transform: show ? 'rotate(0deg)' : 'rotate(180deg)'
+                      }}
+                    />
+                  </ListItem>
+                  <Collapse in={show}>
+                    <CardContent>
+                      {result.description.map((value, i) => (
+                        <Typography
+                          key={i}
+                          paragraph={i === 0}
+                          color={i === 0 ? undefined : 'primary'}
+                          variant={i === 0 ? 'body2' : 'caption'}>
+                          {value}
+                        </Typography>
+                      ))}
+                    </CardContent>
+                  </Collapse>
+                </React.Fragment>
+              )}
+            </CollapseState>
+          ))}
+        </List>
+      </Card>
+    );
+  };
+  HobbiesInterests = () => {
+    const props = this.props;
+    return (
+      <Card className={props.classes.card}>
+        <CardHeader
+          classes={{
+            title: props.classes.title
+          }}
+          title={'Hobbies & Interests'}
+        />
+        <Divider />
+        <CardContent>
+          <Grid container spacing={16} justify={'center'}>
+            {hobbiesInterests.map(item => (
+              <Grid key={item.name} item sm={4} xs={6}>
+                <div>
+                  <Avatar className={props.classes.hobbieInterestAvatar}>
+                    {item.svg}
+                  </Avatar>
                   <Typography
-                    align={'left'}
-                    paragraph
-                    variant={'subtitle1'}>
+                    align={'center'}
+                    style={{
+                      margin: 'auto',
+                      width: 100,
+                      marginTop: 4
+                    }}
+                    variant={'subtitle2'}>
+                    {item.name}
+                  </Typography>
+                  {Boolean(item.subtitle) && (
+                    <Typography
+                      style={{
+                        margin: 'auto',
+                        width: 100
+                      }}
+                      align={'center'}
+                      variant={'caption'}>
+                      {item.subtitle}
+                    </Typography>
+                  )}
+                </div>
+              </Grid>
+            ))}
+          </Grid>
+        </CardContent>
+      </Card>
+    );
+  };
+  render() {
+    const props = this.props;
+    const state = this.state;
+    const isMobile = props.width === 'xs';
+    return (
+      <Container id={'about'} className={props.classes.aboutContainer}>
+        <Subheader visible={props.visible}>About</Subheader>
+        <Snack
+          onClose={this.handleClose}
+          open={state.open}
+          message={state.message}
+        />
+        <Fade in={props.visible}>
+          <div>
+            <Grid container spacing={16}>
+              <Grid item xs={12}>
+                <Hidden smUp>
+                  <Avatar
+                    className={props.classes.avatar}
+                    src={profile.photoURL}
+                  />
+                </Hidden>
+                <CardHeader
+                  style={{ paddingLeft: 0, paddingRight: 0 }}
+                  avatar={
+                    isMobile ? (
+                      undefined
+                    ) : (
+                      <Avatar
+                        className={props.classes.avatar}
+                        src={profile.photoURL}
+                      />
+                    )
+                  }
+                  disableTypography
+                  title={
+                    <Typography
+                      align={'left'}
+                      paragraph={!isMobile}
+                      variant={'h6'}>
+                      {profile.summary[0]}
+                    </Typography>
+                  }
+                  subheader={
+                    <React.Fragment>
+                      <Hidden xsDown>
+                        <Typography
+                          align={'left'}
+                          paragraph={isMobile}
+                          variant={'subtitle1'}>
+                          {profile.summary[1]}
+                        </Typography>
+                      </Hidden>
+                      <Hidden xsDown>
+                        <Links handleOpen={this.handleOpen} />
+                      </Hidden>
+                    </React.Fragment>
+                  }
+                />
+
+                <Hidden smUp>
+                  <Typography align={'left'} paragraph variant={'subtitle1'}>
                     {profile.summary[1]}
                   </Typography>
+                  <Links handleOpen={this.handleOpen} />
                 </Hidden>
-                <Actions />
-              </React.Fragment>
-            }
-          />
-          <Hidden smUp>
-            <Typography align={'left'} paragraph variant={'subtitle1'}>
-              {profile.summary[1]}
-            </Typography>
-          </Hidden>
-        </div>
-      </Fade>
-    </Container>
-  );
-};
+              </Grid>
+              <Grid item sm={6} xs={12}>
+                <this.Personality />
+              </Grid>
+              <Grid item sm={6} xs={12}>
+                <this.HobbiesInterests />
+              </Grid>
+            </Grid>
+          </div>
+        </Fade>
+      </Container>
+    );
+  }
+}
 export default withStyles(styles)(About);

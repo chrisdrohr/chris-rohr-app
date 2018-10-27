@@ -1,17 +1,22 @@
 import React from "react";
-import {MobileStepper} from '@material-ui/core';
+import {MobileStepper, withStyles} from '@material-ui/core';
 import SwipeableViews from "react-swipeable-views";
 import { autoPlay } from "react-swipeable-views-utils";
 import { withState, toRenderProps } from "recompose";
 const AutoPlaySwipeViews = autoPlay(SwipeableViews);
 const State = toRenderProps(withState("index", "onChange", 0));
+
+const styles = {
+
+}
 const AutoSwipeView = props => {
   return (
     <State>
       {({ index, onChange }) => (
         <React.Fragment>
         <AutoPlaySwipeViews
-        style={{textAlign: 'center'}}
+        slideStyle={{textAlign: 'center', overflow: 'hidden'}}
+        style={{textAlign: 'center', overflow: 'hidden'}}
           index={index}
           interval={5000}
           onChangeIndex={index => onChange(index)}
@@ -36,4 +41,4 @@ const AutoSwipeView = props => {
     </State>
   );
 };
-export default AutoSwipeView;
+export default withStyles(styles)(AutoSwipeView)

@@ -1,4 +1,6 @@
 import firebase from 'firebase/app';
+import 'firebase/database';
+export const database = firebase.database; 
 const config = {
     apiKey: "AIzaSyDedbEHnJ3ubc4wIvc0837PogKrtpaNJPc",
     authDomain: "chris-rohr.firebaseapp.com",

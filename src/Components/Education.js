@@ -24,7 +24,14 @@ const styles = ({
   spacing,
   transitions: { create, easing, duration },
   zIndex
-}) => ({});
+}) => ({
+  primary: {
+    color: palette.primary.main
+  },
+  secondary: {
+    color: palette.secondary.main
+  }
+});
 const Education = props => {
   return (
     <Container id={'education'}>
@@ -50,7 +57,7 @@ const Education = props => {
                   }
                   title={
                     <Typography
-                      style={{ color: props.theme.palette.secondary.main }}
+                    className={props.classes.secondary}
                       variant={'subtitle1'}>
                       {item.name}
                     </Typography>
@@ -59,8 +66,8 @@ const Education = props => {
                   subheader={
                     <div>
                       <Typography
-                        variant={'subtitle2'}
-                        style={{ color: props.theme.palette.primary.main }}>
+                      className={props.classes.primary}
+                        variant={'subtitle2'}>
                         {item.field}
                       </Typography>
                       <Typography variant={'caption'}>

@@ -92,6 +92,7 @@ class Skills extends Component {
                                   src={skill.svg}
                                 />
                                 <Typography
+                                align={'center'}
                                   style={{
                                     margin: 'auto',
                                     width: 'fit-content',

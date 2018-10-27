@@ -42,8 +42,8 @@ const GraphicDesign = (props) => {
       { svg: <BuildingA />, val: 3 }
     ];
     return (
-      <Container id={'svg'}>
-        <Subheader visible={props.visible}>SVG</Subheader>
+      <Container id={'graphicDesign'}>
+        <Subheader visible={props.visible}>Graphic Design</Subheader>
         <Fade in={props.visible}>
           <Grid container spacing={8}>
             {SVG.map((item, i) => (

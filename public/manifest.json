@@ -1,16 +1,17 @@
 {
-  "short_name": "Chris Rohr",
   "name": "Chris Rohr",
+  "short_name": "Chris Rohr",
+  "theme_color": "#111122",
+  "background_color": "#ffffff",
+  "display": "fullscreen",
+  "Scope": "/",
+  "start_url": "/",
   "icons": [
     {
       "src": "logo.png",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "sizes": "72x72 96x96 128x128 144x144 152x152 192x192 192x192 384x384 512x512",
       "type": "image/png"
     }
   ],
-  "scope": "/",
-  "start_url": "/?utm_source=homescreen",
-  "display": "standalone",
-  "theme_color": "#112",
-  "background_color": "#ffffff"
+  "splash_pages": null
 }

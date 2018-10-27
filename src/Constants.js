@@ -1,25 +1,40 @@
 import React from "react";
-import * as Icon from '@material-ui/icons';
-import * as SVG from "./svg/SVG";
+import {
+  Album,
+  Book,
+  Code,
+  Equalizer,
+  Image,
+  MusicNote,
+  Person,
+  School,
+  Web,
+  Work,
+} from '@material-ui/icons';
+import * as SVG from "./SVG/SVG";
 
 export const name = "Chris Rohr";
 export const profession = "Web & Mobile Developer";
 export const email = {
-  email: "chrisdrohr@gmail.com",
+  email: "chrisrohrdev@gmail.com",
   info: "Copy Email",
-  message: "Copied chrisdrohr@gmail.com",
+  message: "Copied chrisrohrdev@gmail.com",
   title: "Email"
 };
 export const linkedIn = {
-  info: "Open In New Tab",
+  info: "Open Link In New Tab",
   link: "https://www.linkedin.com/in/chrisdrohr",
   title: "LinkedIn"
 };
+export const gitHub = {
+  info: "Open Link In New Tab",
+  link: "https://github.com/chrisdrohr",
+  title: "GitHub"
+};
 export const resume = {
-  info: "Open In New Tab",
+  info: "View Resume In New Tab",
   title: "Resume",
-  url:
-    "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/Resume-A.pdf?alt=media&token=4fa511fb-13ae-47d4-8b95-3a13319bca28"
+  url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/Resume.pdf?alt=media&token=133d03e7-3809-41e5-acb6-80e7e022cab6"
 };
 export const code = {
   info: "View Code at CodeSandbox",
@@ -56,13 +71,24 @@ export const summary = [
     Hello, i'm <span style={{ color: "#f50057" }}>Chris Rohr</span>
   </span>,
   <span>
-    I am a <span style={{ color: "#03a9f4" }}>Web & Mobile Developer</span>,
-    with a passion for UI effects, animations and creating clean, intuitive, and
+    <span style={{ color: "#03a9f4" }}>Web & Mobile Developer</span>,
+    with a passion for UI effects, cutting edge technology, animations and creating clean, intuitive, and
     dynamic experiences.
   </span>
 ];
 
 export const projects = [
+  {
+    name: "Ashley Aguilera",
+    tech:
+      "React | Javascript | CSS3 | ES6 | PWA | Responsive | Material Design | Firebase | Flow ",
+    description:
+      "Vlog, Health & Wellness, Yoga",
+    // link: "",
+    images: [
+      "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashley1.png?alt=media&token=ee49b7f3-816d-45f6-abd0-928129b71225"
+    ]
+  },
   {
     name: "POPCheckr",
     tech:
@@ -120,6 +146,65 @@ export const projects = [
     tech: "Java | XML",
     description: "A Rock, Paper, Scissors game with a Star Wars Twist"
   }
+];
+export const personality = {
+    title: 'Personality', 
+    subtitle: 'The Psych Central Personality Test is based upon the IPIP 10-item scale. International Personality Item Pool (IPIP): A Scientific Collaboratory for the Development of Advanced Measures of Personality Traits and Other Individual Differences (http://ipip.ori.org/).',
+    results: [
+      {
+        title: "Extraversion", 
+        subtitle: 'Energy, enthusiasm, socialable',
+         description: [
+           "This trait reflects a person's preference for certain kinds of social situations, and how they like to behave in such situations. People high in extraversion are energetic and seek out the company of others. People low in extraversion -- what some might call introverts -- tend to be more quiet and reserved.",
+           "You scored average for this trait, suggesting you lead a balanced life between extraversion and introversion."
+         ], 
+         score: 27
+        },
+      {
+        title: "Agreeableness", 
+        subtitle: 'Altruism, helping others, affection, friendliness',
+        description: [
+          "This trait reflects how we tend to interact with others, especially in terms of our altrusim and friendliness. People who score higher in agreeableness tend to be more trusting, friendly and cooperative than others. People who score lower tend to be more aggressive and less cooperative.",
+          "You scored really high on this trait, suggesting you are a very friendly, cooperative and trusting person."
+        ],  
+        score: 41
+      },
+      {
+        title: "Conscientiousness", 
+        subtitle: 'Control, will, constraint, dependability', 
+        description: [
+          "This trait reflects how organized and persistent a person is in pursuing their goals. People who score high on this trait tend to be more methodical, well-organized and dutiful than others. People who score lower tend to be less careful, less focused and more likely to be distracted from tasks.",
+          "You scored really high on this trait, suggesting you're a well-organized, focused and methodical person."
+        ], 
+        score: 50
+      },
+      {
+        title: "Neuroticism", 
+        subtitle: 'Negative emotions, nervousness',
+        description: [
+          "This trait reflects the tendency for a person to experience negative thoughts and feelings. People who score high on this trait tend to be more prone to insecurity and emotional distress. People who score lower tend to be more relaxed, less emotional and less prone to distress.",
+          "You scored average for this trait, suggesting you've struck a balance between expressing negative emotions and being relaxed."
+        ],  
+        score: 26
+      },
+      {
+        title: "Openness", 
+        subtitle: 'Originality, culture, open-minded, intellect', 
+        description: [
+          "This trait reflects a person's open-mindedness, and interest in culture and art. People who score high on this trait tend to be imaginative, creative, and to seek out cultural and educational experiences. People who score lower on this trait tend to be more down-to-earth, less interested in art and more practical in nature.",
+          "You scored really high on this trait, suggesting you love art and try to keep open-minded."
+        ], 
+        score: 47
+      },
+    ]
+  };
+export const hobbiesInterests = [
+  {name: "Coding", svg: <Code/>},
+  {name: "Fixing", subtitle: "Computers Electronics", svg: <SVG.Wrench/>},
+  {name: "Music", subtitle: "Producing Performing Dancing", svg: <MusicNote/>},
+  {name: "Star Wars", svg: <SVG.DeathStar/>},
+  {name: "Gaming", svg: <SVG.GamePad/>},
+  {name: "Learning", svg: <Book/>},
 ];
 export const languages = [
   { name: "Javascript", svg: SVG.Javascript },
@@ -187,9 +272,9 @@ export const softSkills = [
 export const skills = [
   { name: "Languages", list: languages },
   { name: "Frameworks", list: frameworks },
-  { name: "Testing", list: testing },
   { name: "API's", list: apis },
   { name: "Design/Media", list: designMedia },
+  { name: "Testing", list: testing },
   { name: "Project Management", list: projectManagement },
   { name: "Soft Skills", list: softSkills },
   {name: "Technical", list: technical}
@@ -263,13 +348,13 @@ export const experience = [
   }
 ];
 export const links = [
-  { name: "About", id: "about", icon: <Icon.Person/>},
-  { name: "Skills", id: "skills", icon: <Icon.Equalizer/>},
-  { name: "Projects", id: "projects", icon: <Icon.Web/>},
-  { name: "Experience", id: "experience", icon: <Icon.Work/>},
-  { name: "Education", id: "education", icon: <Icon.School/>},
-  { name: "SVG", id: "svg", icon: <Icon.Image/>},
-  { name: "Music", id: "music", icon: <Icon.Album/>}
+  { name: "About", id: "about", icon: <Person/>},
+  { name: "Skills", id: "skills", icon: <Equalizer/>},
+  { name: "Projects", id: "projects", icon: <Web/>},
+  { name: "Experience", id: "experience", icon: <Work/>},
+  { name: "Education", id: "education", icon: <School/>},
+  { name: "Graphic Design", id: "graphicDesign", icon: <Image/>},
+  { name: "Music", id: "music", icon: <Album/>}
 ];
 
 export const ids = [
@@ -279,7 +364,7 @@ export const ids = [
   "projects",
   "experience",
   "education",
-  "svg",
+  "graphicDesign",
   "music"
 ];
 export const profile = {
