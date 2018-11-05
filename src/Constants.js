@@ -85,9 +85,13 @@ export const projects = [
       "React | Javascript | CSS3 | ES6 | PWA | Responsive | Material Design | Firebase | Flow ",
     description:
       "Vlog, Health & Wellness, Yoga",
-    // link: "",
+    link: "https://ashleypaguilera.com/",
     images: [
-      "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashley1.png?alt=media&token=ee49b7f3-816d-45f6-abd0-928129b71225"
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd3-min.png?alt=media&token=24e8cfbe-ff48-4fa1-8437-0c83dca59071",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd4-min.png?alt=media&token=4ff33c61-59a7-4602-8b6d-a86de7eff892",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd1-min.png?alt=media&token=5b6ab5eb-9a1b-47ed-828b-d6531cdb11e0",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd2-min.png?alt=media&token=46235e39-07b1-4a0e-8e39-24772820cc28",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd5-min.png?alt=media&token=e1f8c811-1d3a-47db-b8f0-79ea0e114977"
     ]
   },
   {
@@ -118,13 +122,13 @@ export const projects = [
         "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fq4.png?alt=media&token=294b02d6-7e7b-46b9-b0d2-e5267fef112f"
       ]
   },
-  {
-    name: "Dynamic Blog/Vlog Template",
-    tech:
-      "React | Javascript | CSS3 | ES6 | Responsive | Material Design | Firebase",
-    description:
-      "A dynamic website that enabled the user to login and link their Youtube channel, add blog posts, upload media, customize theme, disable/enable pages, edit and save text."
-  },
+  // {
+  //   name: "Dynamic Blog/Vlog Template",
+  //   tech:
+  //     "React | Javascript | CSS3 | ES6 | Responsive | Material Design | Firebase",
+  //   description:
+  //     "A dynamic website that enabled the user to login and link their Youtube channel, add blog posts, upload media, customize theme, disable/enable pages, edit and save text."
+  // },
   {
     name: "Nostalgia",
     tech: "Android | Java | XML | Material Design | Animation | Firebase",
