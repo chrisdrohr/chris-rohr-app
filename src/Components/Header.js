@@ -14,13 +14,14 @@ const styles = ({
   zIndex
 }) => ({
   continueButton: {
-    // backgroundColor: 'rgba(3, 169, 244, 0.3)',
+    borderStyle: 'solid',
+    borderWidth: 4,
+    borderColor: 'white',
     color: 'white',
 
     transition: create(['transform'], duration.short, easing.easeInOut),
     transform: 'scale(1)',
     '&:hover': {
-      // backgroundColor: palette.primary.main,
       transform: 'scale(1.5)'
     }
   },

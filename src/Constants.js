@@ -16,6 +16,88 @@ export const dev = process.env.NODE_ENV === "development";
 export const prod = process.env.NODE_ENV === "production";
 export const name = "Chris Rohr";
 export const profession = "Web & Mobile Developer";
+export const freelance = {
+  whatIDo: {
+    url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_designer_kcp7.png?alt=media&token=59f9f109-7c01-4058-bf5b-67b14c5d0ade',
+    title: 'What I Do',
+    subtitle: 'I turn your vision into a cutting edge mobile and tablet responsive web solution, using the latest technologies with search engine optimization.',
+    list: [
+      {
+        url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_web_devices_ad58.png?alt=media&token=1a90b220-0000-4d24-90b1-056734766b30',
+        title: 'Responsive',
+      },
+      {
+        url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_features_overview_jg7a.png?alt=media&token=2c0f239c-9466-4f7a-87ac-dd2ac61ac5af',
+        title: 'Cutting Edge',
+      },
+      {
+        url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_search_engines_nn9e.png?alt=media&token=bf161767-6c94-4ce7-8687-0114c5f4df87',
+        title: 'SEO',
+      },
+    ]
+  },
+  cost: {
+    url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_printing_invoices_5r4r.png?alt=media&token=b000e61f-2cd3-4bdd-b0d0-3bb24459bfc2',
+    title: 'How much does it cost?',
+    subtitle: 'Every website is unique and can vary widely in cost. Accurate costs can only be estimated after discussion of your website. But here are some examples and estimates.',
+    list: [
+      {
+        url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_account_490v.png?alt=media&token=9290239d-6fda-4815-bb27-9db809f90fa7',
+        title: 'Static site: $300 - $800',
+        subtitle: 'These are non-editable internet sites that don’t change often. Are usually landing pages, business or personal Info sites, and may sometimes have a contact form'
+      },
+      {
+        url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_content_vbqo.png?alt=media&token=8b5a2880-4a66-4cdf-89cf-56aa8e5ee9a7',
+        title: 'Editable Dynamic Website: $800 - $2000',
+        subtitle: "User can edit content and images. It engages the user with login areas. This site is self-managed. Are usually Blog's, Vlog's, or Portfolio."
+      },
+      {
+        url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_add_to_cart_vkjp.png?alt=media&token=e82f4bda-3a54-4008-9663-e70123c74d0f',
+        title: 'E-commerce Websites: $8000 -$5000',
+        subtitle: 'They have a payment gateway, e.g., PayPal, Credit card, Apple Pay, Google Pay. And functionality to sell your products or services.'
+      },
+     
+    ],
+      infoUrl: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_server_q2pb.png?alt=media&token=b075c235-9978-460a-bede-592746f0085b',
+      infoSubtitle: 'Some websites may require a database to store information or a server to run tasks such as processing payments, sending emails, processing images, communicating with other third-party services.',
+    footerTitle: 'What if I have a budget?',
+    footerDescription: 'No problem! Again, every website is different and may vary widely in cost. And through our discussions we can come up with a solution to match your needs or even add on more features or pages in the future.',
+  },
+  process: {
+    url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_design_process_iqqg.png?alt=media&token=a1cda1f6-f895-4ec1-8706-5da3951c26e0",
+    title: "What's the process?",
+    list: [
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_brainstorming_49d4.png?alt=media&token=48c693db-1459-43e1-ab55-b01fee2efb9b",
+        title: "Planning & Discussion",
+        subtitle: "We’ll start by discussing your project, going into detail of every aspect of the website and coming up with software solutions to solve problems and make your life easier."
+      },
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_user_flow_vr6w.png?alt=media&token=c8d5a208-78a3-4676-8afd-4b3f58cc3b96",
+        title: "Design & Research",
+        subtitle: "Create wire-frames & visual renderings of your website while designing an easy to use and visually pleasing user experience."
+      },
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_programming_2svr.png?alt=media&token=3ea0fb96-ff7a-48a8-b6a7-c0d90cb5f323",
+        title: "Development & Testing",
+        subtitle: "Upon approval i would begin the development process of writing your website from scratch to match the approved designs and conduct the appropriate testing."
+      },
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_co-workers_ujs6.png?alt=media&token=8664d8e3-8486-4b00-8fb7-7b14d01ae11f",
+        title: "Review & Feedback",
+        subtitle: "We’ll review the designs and make changes or additions based on your feedback."
+      },
+      {
+        url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_agreement_aajr.png?alt=media&token=9da8a216-a344-403c-9aec-bce555bce20a",
+        title: "Review & Finalize",
+        subtitle: "Review the completed website and address any concerns or changes until you are completely satisfied."
+      },
+    ]
+  },
+  footer: {
+    title: "Review the completed website and address any concerns or changes until you are completely satisfied."
+  }
+};
 export const email = {
   email: "chrisrohrdev@gmail.com",
   info: "Copy Email",
@@ -35,7 +117,7 @@ export const gitHub = {
 export const resume = {
   info: "View Resume In New Tab",
   title: "Resume",
-  url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/Resume.pdf?alt=media&token=133d03e7-3809-41e5-acb6-80e7e022cab6"
+  url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/Resume.pdf?alt=media&token=269ae012-a9e3-4b83-b5c1-a02b0f5521f7"
 };
 export const code = {
   info: "View Code at GitHub",
