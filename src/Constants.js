@@ -15,8 +15,12 @@ import * as SVG from "./SVG/SVG";
 export const dev = process.env.NODE_ENV === "development";
 export const prod = process.env.NODE_ENV === "production";
 export const name = "Chris Rohr";
-export const profession = "Web & Mobile Developer";
+export const profession = "React Web Developer";
 export const freelance = {
+  header: {
+    title: 'Web Design Services',
+    url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_Golden_Gate_Bridge_00us.png?alt=media&token=ba1fee6c-e17c-4d74-a232-bd2db3e84961"
+  },
   whatIDo: {
     url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_designer_kcp7.png?alt=media&token=59f9f109-7c01-4058-bf5b-67b14c5d0ade',
     title: 'What I Do',
@@ -38,7 +42,7 @@ export const freelance = {
   },
   cost: {
     url: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_printing_invoices_5r4r.png?alt=media&token=b000e61f-2cd3-4bdd-b0d0-3bb24459bfc2',
-    title: 'How much does it cost?',
+    title: 'How Much Does It Cost?',
     subtitle: 'Every website is unique and can vary widely in cost. Accurate costs can only be estimated after discussion of your website. But here are some examples and estimates.',
     list: [
       {
@@ -65,7 +69,7 @@ export const freelance = {
   },
   process: {
     url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_design_process_iqqg.png?alt=media&token=a1cda1f6-f895-4ec1-8706-5da3951c26e0",
-    title: "What's the process?",
+    title: "What's The Process?",
     list: [
       {
         url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_brainstorming_49d4.png?alt=media&token=48c693db-1459-43e1-ab55-b01fee2efb9b",
@@ -94,8 +98,12 @@ export const freelance = {
       },
     ]
   },
+  project: {
+    url: "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/freelance%2Fundraw_responsive_6c8s.png?alt=media&token=f76edb59-3184-4ae5-bcb4-b34bc763c7fd",
+    title: "What Have You Worked On?"
+  },
   footer: {
-    title: "Review the completed website and address any concerns or changes until you are completely satisfied."
+    title: "Questions? Want to talk about your website? email me at "
   }
 };
 export const email = {
@@ -154,7 +162,7 @@ export const summary = [
     Hello, i'm <span style={{ color: "#f50057" }}>Chris Rohr</span>
   </span>,
   <span>
-    <span style={{ color: "#03a9f4" }}>Web & Mobile Developer</span>,
+    <span style={{ color: "#03a9f4" }}>React Web Developer</span>,
     with a passion for UI effects, cutting edge technology, animations and creating clean, intuitive, and
     dynamic experiences.
   </span>
@@ -164,22 +172,33 @@ export const projects = [
   {
     name: "Ashley Aguilera",
     tech:
-      "React | Javascript | CSS3 | ES6 | PWA | Responsive | Material Design | Firebase | Flow ",
+      "React | Redux | Javascript | CSS3 | ES6 | PWA | Responsive | Material Design | Firebase | Flow ",
     description:
       "Vlog, Health & Wellness, Yoga",
     link: "https://ashleypaguilera.com/",
     images: [
-     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd3-min.png?alt=media&token=24e8cfbe-ff48-4fa1-8437-0c83dca59071",
-     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd4-min.png?alt=media&token=4ff33c61-59a7-4602-8b6d-a86de7eff892",
-     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd1-min.png?alt=media&token=5b6ab5eb-9a1b-47ed-828b-d6531cdb11e0",
-     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd2-min.png?alt=media&token=46235e39-07b1-4a0e-8e39-24772820cc28",
-     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleyxd5-min.png?alt=media&token=e1f8c811-1d3a-47db-b8f0-79ea0e114977"
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleypaguilera.com_(iPhone%206_7_8%20Plus)_iphone6_silver_portrait.png?alt=media&token=864b7373-3c8f-4a6e-a688-d9b16fd35e34",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleypaguilera.com_vlog(iPad%20Pro)_ipadair2_gold_right.png?alt=media&token=0e98c88b-ab69-413c-9714-3536ead9a083",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fashleypaguilera.com_vlog(iPad%20Pro)_ipadair2_gold_landscape.png?alt=media&token=17345dab-eb9c-4953-9277-6c5cbdec7701",
+    ]
+  },
+  {
+    name: "Chris Rohr",
+    tech:
+      "React | Javascript | CSS3 | ES6 | PWA | Responsive | Material Design | Firebase | Flow ",
+    description:
+      "Portfolio",
+    link: "https://chrisrohr.app/",
+    images: [
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fchrisrohrapp_iphone8silver_portrait.png?alt=media&token=da782692-a545-4dad-90b9-b06418d6690b",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fchrisrohr.app_(iPad%20Pro)_ipadair2_gold_right.png?alt=media&token=2bfd7efc-eb5a-4b01-b013-ffe99a488ff9",
+     "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fchrisrohr.app_(iPad%20Pro)_ipadair2_gold_landscape.png?alt=media&token=fc49c48f-d52c-4c0b-99d6-fffbb440ec6b",
     ]
   },
   {
     name: "POPCheckr",
     tech:
-      "React | Javascript | CSS3 | ES6 | PWA | Responsive | Material Design | Firebase | Flow | Typescript | Puppeteer | Jest",
+      "React | Redux | Javascript | CSS3 | ES6 | PWA | Responsive | Material Design | Firebase | Flow | Typescript | Puppeteer | Jest",
     description:
       "A B2C Party Planning & ordering platform that streamlines the process of searching ordering and managing your event.",
     link: "https://www.popcheckr.com/",
@@ -187,7 +206,6 @@ export const projects = [
       "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fpopcheckr1.png?alt=media&token=445e91b3-be8d-4f23-a784-f6e995b25752",
       "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fpopcheckr2.png?alt=media&token=af4a8a77-9a5f-426d-b90d-d3dc5bfc4446",
       "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fpopcheckr3.png?alt=media&token=8aafba74-204a-4316-983d-f9c2f50fea9b",
-      "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fpopcheckr4.png?alt=media&token=ff85a30c-10cc-4c46-8692-71fb16a900d0"
     ]
   },
   {
@@ -201,7 +219,6 @@ export const projects = [
         "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fq1.png?alt=media&token=9bf6212f-54f5-4e26-94b2-425dd26e83b1",
         "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fq2.png?alt=media&token=7250e733-df9e-4d37-b9eb-4293e955e0eb",
         "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fq3.png?alt=media&token=3fbe6ab1-d8fd-4817-b6e6-7c3f2bc7be82",
-        "https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/screenshots%2Fq4.png?alt=media&token=294b02d6-7e7b-46b9-b0d2-e5267fef112f"
       ]
   },
   // {

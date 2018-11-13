@@ -17,8 +17,9 @@ import Projects from './Projects';
 import Links from './Links';
 import Img from '../Custom/ImgCR';
 import Snack from '../Custom/Snack';
-import { freelance, profile } from '../Constants';
+import { freelance, profile, email } from '../Constants';
 import { toRenderProps, withState } from 'recompose';
+import Logo from '../SVG/Logo.svg';
 const SnackState = toRenderProps(withState('message', 'update', ''));
 
 const styles = ({
@@ -27,6 +28,12 @@ const styles = ({
   shadows,
   transitions: { create, duration, easing }
 }) => ({
+  about: {
+    // marginTop: '30vh',
+    [breakpoints.down('xs')]: {
+      // marginTop: '25vh'
+    }
+  },
   avatar: {
     height: 200,
     width: 200,
@@ -46,7 +53,7 @@ const styles = ({
   container: {
     margin: 'auto',
     maxWidth: 800,
-    padding: 8
+    padding: 0
   },
   content: {
     // display: 'flex',
@@ -54,6 +61,32 @@ const styles = ({
   divider: {
     marginTop: 16,
     marginBottom: 16
+  },
+  header: {
+    width: '100%'
+    // position: 'absolute',
+    // backgroundColor: 'white',
+    // height: '50vh',
+    // width: '100vw',
+    // [breakpoints.down('xs')]: {
+      // height: '40vh',
+    // }
+  },
+  headerImage: {
+    objectFit: 'contain',
+    height: '20vh',
+    width: '100%',
+    margin: 'auto'
+    // height: '50vh',
+    // [breakpoints.down('xs')]: {
+      // height: '40vh',
+    // }
+  },
+  headerTitle: {
+    // position: 'absolute',
+    color: palette.text.secondary,
+
+    paddingTop: '5vh'
   },
   image: {
     // height: 150,
@@ -68,18 +101,39 @@ const styles = ({
 });
 
 const Container = props => (
-  <Card>
+  <Card style={props.style} className={props.className}>
     <CardContent>{props.children}</CardContent>
   </Card>
 );
 class Freelance extends Component {
+
+
+  Header = () => {
+    const props = this.props;
+    return (
+      <div className={props.classes.header}>
+        <img
+          className={props.classes.headerImage}
+          alt={freelance.header.title}
+          src={Logo}
+        />
+        <Typography
+        align={'center'}
+        className={props.classes.headerTitle}
+        paragraph
+        variant={'h2'}>
+        {freelance.header.title}
+      </Typography>
+      </div>
+    );
+  };
   AboutComponent = () => {
     const props = this.props;
     const isMobile = props.width === 'xs';
     return (
       <SnackState>
-        {({message, update}) => (
-          <Container>
+        {({ message, update }) => (
+          <Container className={props.classes.about}>
             <Snack
               onClose={() => update('')}
               open={message !== ''}
@@ -122,6 +176,12 @@ class Freelance extends Component {
                 </React.Fragment>
               }
             />
+            <Hidden smUp>
+              <Typography align={'left'} paragraph variant={'subtitle1'}>
+                {profile.summary[1]}
+              </Typography>
+              <Links handleOpen={update} />
+            </Hidden>
           </Container>
         )}
       </SnackState>
@@ -198,8 +258,13 @@ class Freelance extends Component {
     );
   };
   ProjectsComponent = () => {
+    const props = this.props;
     return (
       <Container>
+        <Img alt={freelance.project.title} src={freelance.project.url} />
+        <Typography className={props.classes.title} paragraph variant={'h4'}>
+          {freelance.project.title}
+        </Typography>
         <Projects />
       </Container>
     );
@@ -218,7 +283,7 @@ class Freelance extends Component {
         </Typography>
         <Grid container spacing={16}>
           {freelance.cost.list.map((item, i) => (
-            <Grid item sm={i === 4 ? 12 : 6} xs={12}>
+            <Grid item sm={i === 2 ? 12 : 6} xs={12}>
               <div>
                 <Img
                   style={{ objectFit: 'contain' }}
@@ -255,22 +320,51 @@ class Freelance extends Component {
       </Container>
     );
   };
+  Footer = () => {
+    return (
+      <Container style={{width: '100%'}}>
+        <SnackState>
+          {({ message, update }) => (
+            <React.Fragment>
+              <Snack
+                onClose={() => update('')}
+                open={message !== ''}
+                message={message}
+              />
+              <Typography align={'left'} paragraph variant={'subtitle1'}>
+                {freelance.footer.title}
+               <span>
+               <a href={"mailto:"+ email.email}>{email.email}</a>
+               </span>
+              </Typography>
+              <Links handleOpen={update} />
+            </React.Fragment>
+          )}
+        </SnackState>
+      </Container>
+    );
+  };
   render() {
     const props = this.props;
     return (
-      <div className={props.classes.container}>
-        <List>
-          {[
-            <this.AboutComponent />,
-            <this.WhatIDo />,
-            <this.Process />,
-            <this.ProjectsComponent />,
-            <this.Cost />
-          ].map((component, i) => (
-            <ListItem key={i}>{component}</ListItem>
-          ))}
-        </List>
-      </div>
+      <React.Fragment>
+       
+        <div className={props.classes.container}>
+          <List>
+            {[
+              <this.Header />,
+              <this.AboutComponent />,
+              <this.WhatIDo />,
+              <this.Process />,
+              <this.ProjectsComponent />,
+              <this.Cost />,
+              <this.Footer />
+            ].map((component, i) => (
+              <ListItem key={i}>{component}</ListItem>
+            ))}
+          </List>
+        </div>
+      </React.Fragment>
     );
   }
 }
