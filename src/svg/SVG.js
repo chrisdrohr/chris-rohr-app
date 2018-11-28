@@ -31,7 +31,11 @@ import deathStar from './DeathStar';
 import wrench from './Wrench';
 import gamePad from './GamePad';
 import gitHubComponent from './GitHub';
+import jquery from './jquery.svg';
+import materialDesign from './materialDesign.svg';
 
+export const MaterialDesign = materialDesign;
+export const JQuery = jquery;
 export const GitHubComponent = gitHubComponent;
 export const Wrench = wrench;
 export const DeathStar = deathStar;

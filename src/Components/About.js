@@ -9,17 +9,20 @@ import {
   Fade,
   Grid,
   Hidden,
+  CircularProgress,
   LinearProgress,
   List,
   ListItem,
   ListItemText,
+  Tooltip,
   Typography,
   withStyles
 } from '@material-ui/core';
 import { profile, hobbiesInterests, personality } from '../Constants';
-import { KeyboardArrowDown } from '@material-ui/icons';
+import { KeyboardArrowDown, Info } from '@material-ui/icons';
 import Snack from '../Custom/Snack';
 import Links from './Links';
+import Subtitle from '../Custom/Subtitle';
 import Container from '../Custom/Container';
 import React from 'react';
 import { toRenderProps, withState } from 'recompose';
@@ -52,13 +55,17 @@ const styles = ({
   aboutContainer: {
     minHeight: '50vh'
   },
-  hobbieInterestAvatar: {
+  card: {
     backgroundColor: palette.primary.main,
     height: 100,
     width: 100,
-    boxShadow: shadows[2],
-    borderRadius: 4,
+    // boxShadow: shadows[2],
+    // borderRadius: 4,
     margin: 'auto'
+  },
+  cardAvatar: {
+    margin: '16px auto',
+    backgroundColor: palette.primary.main
   },
 
   personalityIcon: {
@@ -66,8 +73,10 @@ const styles = ({
     transition: create('transform', duration.short, easing.sharp)
   },
   progress: {
-    marginTop: 4,
-    borderRadius: 8
+    marginTop: 8,
+    borderRadius: 16,
+    height: 8,
+    boxShadow: shadows[1]
   },
   title: {
     color: palette.secondary.main
@@ -91,22 +100,22 @@ class About extends React.Component {
   Personality = () => {
     const props = this.props;
     return (
-      <Card>
-        <CardHeader
-          classes={{
-            title: props.classes.title
-          }}
-          title={personality.title}
-        />
+      <div>
+        <Subtitle
+          action={
+            <Tooltip title={personality.subtitle}>
+              <Info color={'action'} />
+            </Tooltip>
+          }>
+          {personality.title}
+        </Subtitle>
         <Divider />
-        <CardContent>
-          <Typography variant={'caption'}>{personality.subtitle}</Typography>
-        </CardContent>
+
         <List>
           {personality.results.map(result => (
             <CollapseState key={result.title}>
               {({ show, update }) => (
-                <React.Fragment>
+                <Card style={{margin: '8px 0'}}>
                   <ListItem
                     button
                     onClick={() => update(!show)}
@@ -116,7 +125,7 @@ class About extends React.Component {
                       primary={result.title}
                       secondary={
                         <div>
-                          <Typography variant={'body2'}>
+                          <Typography variant={'caption'}>
                             {result.subtitle}
                           </Typography>
                           <LinearProgress
@@ -149,31 +158,26 @@ class About extends React.Component {
                       ))}
                     </CardContent>
                   </Collapse>
-                </React.Fragment>
+                </Card>
               )}
             </CollapseState>
           ))}
         </List>
-      </Card>
+      </div>
     );
   };
   HobbiesInterests = () => {
     const props = this.props;
     return (
-      <Card className={props.classes.card}>
-        <CardHeader
-          classes={{
-            title: props.classes.title
-          }}
-          title={'Hobbies & Interests'}
-        />
+      <div>
+        <Subtitle>Hobbies & Interests</Subtitle>
         <Divider />
         <CardContent>
           <Grid container spacing={16} justify={'center'}>
             {hobbiesInterests.map(item => (
               <Grid key={item.name} item md={4} sm={6} xs={6}>
-                <div>
-                  <Avatar className={props.classes.hobbieInterestAvatar}>
+                <Card className={props.classes.card}>
+                  <Avatar className={props.classes.cardAvatar}>
                     {item.svg}
                   </Avatar>
                   <Typography
@@ -181,12 +185,14 @@ class About extends React.Component {
                     style={{
                       margin: 'auto',
                       width: 100,
-                      marginTop: 4
+                      marginTop: 4,
+                      color: 'white'
                     }}
                     variant={'subtitle2'}>
                     {item.name}
                   </Typography>
-                  {Boolean(item.subtitle) && (
+                </Card>
+                {/* {Boolean(item.subtitle) && (
                     <Typography
                       style={{
                         margin: 'auto',
@@ -196,13 +202,12 @@ class About extends React.Component {
                       variant={'caption'}>
                       {item.subtitle}
                     </Typography>
-                  )}
-                </div>
+                  )} */}
               </Grid>
             ))}
           </Grid>
         </CardContent>
-      </Card>
+      </div>
     );
   };
   render() {
@@ -211,14 +216,13 @@ class About extends React.Component {
     const isMobile = props.width === 'xs';
     return (
       <Container className={props.classes.aboutContainer}>
-          <div id={'about'}/>
-        <Subheader visible={props.visible}>About</Subheader>
+        <div id={'about'} />
+        <Subheader>About</Subheader>
         <Snack
           onClose={this.handleClose}
           open={state.open}
           message={state.message}
         />
-        <Fade in={props.visible}>
           <div>
             <Grid container spacing={16}>
               <Grid item xs={12}>
@@ -265,7 +269,7 @@ class About extends React.Component {
                     </React.Fragment>
                   }
                 />
-                <div id={'scrollTo'}/>
+                <div id={'scrollTo'} />
                 <Hidden smUp>
                   <Typography align={'left'} paragraph variant={'subtitle1'}>
                     {profile.summary[1]}
@@ -273,15 +277,14 @@ class About extends React.Component {
                   <Links handleOpen={this.handleOpen} />
                 </Hidden>
               </Grid>
-              <Grid item sm={6} xs={12}>
+              {/* <Grid item sm={6} xs={12}>
                 <this.Personality />
               </Grid>
               <Grid item sm={6} xs={12}>
                 <this.HobbiesInterests />
-              </Grid>
+              </Grid> */}
             </Grid>
           </div>
-        </Fade>
       </Container>
     );
   }

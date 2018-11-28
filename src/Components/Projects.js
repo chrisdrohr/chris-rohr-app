@@ -51,8 +51,7 @@ class Projects extends Component {
     return (
       <Container>
         <div id={'projects'} />
-        <Subheader visible={props.visible}>Projects</Subheader>
-        <Core.Fade in={true}>
+        <Subheader>Projects</Subheader>
           <Core.Grid container spacing={16}>
             {profile.projects.map((item, i) => (
               <Core.Grid item key={i} sm={12} xs={12}>
@@ -185,7 +184,6 @@ class Projects extends Component {
               </Core.Grid>
             ))}
           </Core.Grid>
-        </Core.Fade>
       </Container>
     );
   }

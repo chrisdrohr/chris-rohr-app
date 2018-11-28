@@ -1,19 +1,15 @@
 import React from 'react';
 import Container from '../Custom/Container';
-import Subheader from '../Custom/Subheader';
+import Subtitle from '../Custom/Subtitle';
+import CollapseListItem from '../Custom/CollapseListItem';
 import { profile } from '../Constants';
 import {
-  Avatar,
-  Card,
-  CardContent,
-  CardHeader,
-  Fade,
-  Grid,
+  List,
   ListItem,
   ListItemText,
-  Typography,
   withStyles
 } from '@material-ui/core';
+
 import { School } from '@material-ui/icons';
 
 const styles = ({
@@ -34,63 +30,24 @@ const styles = ({
 });
 const Education = props => {
   return (
-    <Container>
-    <div id={'education'}/>
-      <Subheader visible={props.visible}>Education</Subheader>
-      <Fade in={props.visible}>
-        <Grid container spacing={16}>
-          {profile.education.map((item, i) => (
-            <Grid key={i} item sm={6} xs={12}>
-              <Card style={{ width: '100%' }}>
-                <CardHeader
-                  style={{ alignItems: 'flex-start' }}
-                  avatar={
-                    <Avatar>
-                      <School />
-                    </Avatar>
-                  }
-                  action={
-                    <Typography
-                      style={{ marginTop: 8, marginRight: 16 }}
-                      variant={'caption'}>
-                      {item.duration}
-                    </Typography>
-                  }
-                  title={
-                    <Typography
-                    className={props.classes.secondary}
-                      variant={'subtitle1'}>
-                      {item.name}
-                    </Typography>
-                  }
-                  disableTypography
-                  subheader={
-                    <div>
-                      <Typography
-                      className={props.classes.primary}
-                        variant={'subtitle2'}>
-                        {item.field}
-                      </Typography>
-                      <Typography variant={'caption'}>
-                        {item.location}
-                      </Typography>
-                    </div>
-                  }
-                />
-                <CardContent>
-                  {Boolean(item.description) &&
-                    item.description.map((value, i) => (
-                      <ListItem dense key={i}>
-                        <ListItemText secondary={value} />
-                      </ListItem>
-                    ))}
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Fade>
-    </Container>
+    <div>
+      <Subtitle icon={<School />}>Education</Subtitle>
+      <List>
+        {profile.education.map((item, i) => (
+          <CollapseListItem
+            key={i}
+            primary={item.name}
+            secondary={item.field + ' ' + item.duration}>
+            {Boolean(item.description) &&
+              item.description.map((value, i) => (
+                <ListItem dense key={i}>
+                  <ListItemText secondary={value} />
+                </ListItem>
+              ))}
+          </CollapseListItem>
+        ))}
+      </List>
+    </div>
   );
 };
 export default withStyles(styles)(Education);

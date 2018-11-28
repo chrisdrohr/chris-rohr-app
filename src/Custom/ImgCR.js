@@ -35,11 +35,14 @@ const ImgCR = props => {
   return (
     <State>
       {({ loaded, onLoad }) => (
-        <div style={props.rootStyle} className={props.classes.root}>
+        <div style={props.rootStyle} className={classnames(props.classes.root,{
+          [props.rootClassName]: Boolean(props.rootClassName)
+        })}>
           {props.src && (
             <img
               alt={props.alt}
-              {...props}
+              src={props.src}
+              style={props.style}
               onLoad={() => onLoad(true)}
               className={classnames({
                 [props.classes.image]: true,

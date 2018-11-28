@@ -4,7 +4,7 @@ import { Close } from "@material-ui/icons";
 
 const styles = ({ palette }) => ({
   snackbar: {
-    backgroundColor: palette.primary.main
+    // backgroundColor: palette.primary.main
   }
 });
 class Snack extends Component {

@@ -1,9 +1,28 @@
-import * as Core from "@material-ui/core";
-import React from "react";
+import { Card, withStyles } from '@material-ui/core';
+import React from 'react';
+import classnames from 'classnames';
 
+const styles = ({ breakpoints }) => ({
+  container: {
+    marginTop: 8,
+    marginBottom: 8
+  },
+  content: {
+    padding: 16,
+
+    [breakpoints.down('xs')]: {
+      padding: 8,
+    }
+  }
+});
 const Container = props => (
-    <Core.CardContent id={props.id}>
-        {props.children}
-    </Core.CardContent>
+  <Card
+    className={classnames({
+      [props.classes.container]: !props.noMargin,
+      [props.className]: Boolean(props.className)
+    })}
+    id={props.id}>
+    <div className={props.classes.content}>{props.children}</div>
+  </Card>
 );
-export default Container;
+export default withStyles(styles)(Container);

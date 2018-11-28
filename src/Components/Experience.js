@@ -1,17 +1,11 @@
 import React from 'react';
-import Container from '../Custom/Container';
-import Subheader from '../Custom/Subheader';
+import Subtitle from '../Custom/Subtitle';
+import CollapseListItem from '../Custom/CollapseListItem';
 import { experience } from '../Constants';
 import {
-  Avatar,
-  Card,
-  CardContent,
-  CardHeader,
-  Fade,
-  Grid,
+  List,
   ListItem,
   ListItemText,
-  Typography,
   withStyles
 } from '@material-ui/core';
 import { Work } from '@material-ui/icons';
@@ -35,59 +29,25 @@ const styles = ({
 
 const Experience = props => {
   return (
-    <Container>
-    <div id={'experience'}/>
-      <Subheader visible={props.visible}>Experience</Subheader>
-      <Fade in={props.visible}>
-        <Grid container spacing={16}>
-          {experience.map((item, i) => (
-            <Grid key={i} item sm={6} xs={12}>
-              <Card style={{ width: '100%' }}>
-                <CardHeader
-                  style={{ alignItems: 'flex-start' }}
-                  avatar={
-                    <Avatar>
-                      <Work />
-                    </Avatar>
-                  }
-                  title={
-                    <Typography
-                      className={props.classes.secondary}
-                      variant={'subtitle1'}>
-                      {item.position}
-                    </Typography>
-                  }
-                  disableTypography
-                  subheader={
-                    <div>
-                      <Typography paragraph variant={'caption'}>
-                        {item.duration}
-                      </Typography>
-                      <Typography
-                        className={props.classes.primary}
-                        variant={'subtitle2'}>
-                        {item.name}
-                      </Typography>
-                      <Typography variant={'caption'}>
-                        {item.location}
-                      </Typography>
-                    </div>
-                  }
-                />
-                <CardContent>
-                  {Boolean(item.description) &&
-                    item.description.map((value, i) => (
-                      <ListItem dense key={i}>
-                        <ListItemText secondary={value} />
-                      </ListItem>
-                    ))}
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Fade>
-    </Container>
+    <div>
+      <Subtitle icon={<Work/>}>Experience</Subtitle>
+      <List>
+        {experience.map((item, i) => (
+          <CollapseListItem
+            key={i}
+            primary={item.name}
+            secondary={item.position +' '+ item.duration}>
+           
+            {Boolean(item.description) &&
+              item.description.map((value, i) => (
+                <ListItem dense key={i}>
+                  <ListItemText secondary={value} />
+                </ListItem>
+              ))}
+          </CollapseListItem>
+        ))}
+      </List>
+    </div>
   );
 };
 export default withStyles(styles)(Experience);

@@ -13,7 +13,7 @@ import {
   withStyles,
   withWidth
 } from '@material-ui/core';
-import Projects from './Projects';
+import Portfolio from '../Containers/Portfolio';
 import Links from './Links';
 import Img from '../Custom/ImgCR';
 import Snack from '../Custom/Snack';
@@ -29,9 +29,7 @@ const styles = ({
   transitions: { create, duration, easing }
 }) => ({
   about: {
-    // marginTop: '30vh',
     [breakpoints.down('xs')]: {
-      // marginTop: '25vh'
     }
   },
   avatar: {
@@ -56,7 +54,6 @@ const styles = ({
     padding: 0
   },
   content: {
-    // display: 'flex',
   },
   divider: {
     marginTop: 16,
@@ -64,34 +61,21 @@ const styles = ({
   },
   header: {
     width: '100%'
-    // position: 'absolute',
-    // backgroundColor: 'white',
-    // height: '50vh',
-    // width: '100vw',
-    // [breakpoints.down('xs')]: {
-      // height: '40vh',
-    // }
   },
   headerImage: {
     objectFit: 'contain',
     height: '20vh',
     width: '100%',
-    margin: 'auto'
-    // height: '50vh',
-    // [breakpoints.down('xs')]: {
-      // height: '40vh',
-    // }
+    margin: 'auto',
+    borderRadius: 8,
   },
   headerTitle: {
-    // position: 'absolute',
-    color: palette.text.secondary,
-
     paddingTop: '5vh'
   },
   image: {
-    // height: 150,
-    // width: 80,
-    margin: 'auto'
+    marginBottom: 8,
+    margin: 'auto',
+    borderRadius: 8,
   },
   title: {
     paddingTop: 16,
@@ -191,7 +175,9 @@ class Freelance extends Component {
     const props = this.props;
     return (
       <Container>
-        <Img alt={freelance.whatIDo.title} src={freelance.whatIDo.url} />
+        <Img 
+         rootClassName={props.classes.image}
+        alt={freelance.whatIDo.title} src={freelance.whatIDo.url} />
         <Typography className={props.classes.title} paragraph variant={'h4'}>
           {freelance.whatIDo.title}
         </Typography>
@@ -206,7 +192,7 @@ class Freelance extends Component {
               <div>
                 <Img
                   style={{ objectFit: 'contain' }}
-                  className={props.classes.image}
+                  rootClassName={props.classes.image}
                   alt={item.title}
                   src={item.url}
                 />
@@ -225,7 +211,9 @@ class Freelance extends Component {
     const props = this.props;
     return (
       <Container>
-        <Img alt={freelance.process.title} src={freelance.process.url} />
+        <Img
+         rootClassName={props.classes.image}
+        alt={freelance.process.title} src={freelance.process.url} />
         <div>
           <Typography className={props.classes.title} paragraph variant={'h4'}>
             {freelance.process.title}
@@ -240,7 +228,7 @@ class Freelance extends Component {
               <div>
                 <Img
                   style={{ objectFit: 'contain' }}
-                  className={props.classes.image}
+                  rootClassName={props.classes.image}
                   alt={item.title}
                   src={item.url}
                 />
@@ -261,11 +249,13 @@ class Freelance extends Component {
     const props = this.props;
     return (
       <Container>
-        <Img alt={freelance.project.title} src={freelance.project.url} />
+        <Img 
+         rootClassName={props.classes.image}
+        alt={freelance.project.title} src={freelance.project.url} />
         <Typography className={props.classes.title} paragraph variant={'h4'}>
           {freelance.project.title}
         </Typography>
-        <Projects />
+        <Portfolio />
       </Container>
     );
   };
@@ -274,7 +264,7 @@ class Freelance extends Component {
     return (
       <Container>
         <Img
-          className={props.classes.image}
+          rootClassName={props.classes.image}
           alt={freelance.cost.title}
           src={freelance.cost.url}
         />
@@ -287,7 +277,7 @@ class Freelance extends Component {
               <div>
                 <Img
                   style={{ objectFit: 'contain' }}
-                  className={props.classes.image}
+                  rootClassName={props.classes.image}
                   alt={item.title}
                   src={item.url}
                 />
@@ -304,7 +294,7 @@ class Freelance extends Component {
         <Divider className={props.classes.divider} />
         <Img
           style={{ objectFit: 'contain' }}
-          className={props.classes.image}
+          rootClassName={props.classes.image}
           alt={freelance.cost.title}
           src={freelance.cost.infoUrl}
         />
@@ -334,7 +324,7 @@ class Freelance extends Component {
               <Typography align={'left'} paragraph variant={'subtitle1'}>
                 {freelance.footer.title}
                <span>
-               <a href={"mailto:"+ email.email}>{email.email}</a>
+               <a style={{color: 'white'}} href={"mailto:"+ email.email}>{email.email}</a>
                </span>
               </Typography>
               <Links handleOpen={update} />

@@ -11,12 +11,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-    /*opacity: 0;*/
-    /*transition: opacity 300ms ease-out;*/
 }
 #root {
-  /*opacity: 0;*/
-  /*transition: opacity 300ms ease-out;*/
+
 }
 #splash {
   background: url("./logo.svg") no-repeat center;

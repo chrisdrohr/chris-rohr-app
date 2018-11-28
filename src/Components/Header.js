@@ -37,7 +37,14 @@ const styles = ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: window.innerHeight
+  },
+  logo: {
+    position: 'fixed',
+    top: 16,
+    left: 16,
+    height: '2.5rem'
   }
+ 
 });
 
 class Header extends React.Component {
@@ -61,7 +68,7 @@ class Header extends React.Component {
     return (
       <div id={'header'} className={props.classes.headerContainer}>
         <div>
-          <Logo show={state.show} />
+          <Logo className={props.classes.logo} show={state.show} />
           <Fade in={state.show} style={{ transitionDelay: 2000 }}>
             <div
               style={{
