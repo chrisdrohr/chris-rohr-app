@@ -7,8 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
       <meta name="mobile-web-app-capable" content="yes">
       <meta name="apple-mobile-web-app-capable" content="yes">
+      <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Chris Rohr">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <meta name="msapplication-TileImage" content="/logo.png">
+  <meta name="msapplication-TileColor" content="#2F3BA2">
+  <script src="lazysizes.min.js" async></script>
       <meta name="theme-color" content="#112">
-      <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans" rel="stylesheet">
+      <link async href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Open+Sans" rel="stylesheet">
     <title>Chris Rohr</title>
   </head>
   <body id="body">
@@ -16,22 +23,5 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <div id="root"></div>
-  <script>
-      if ('serviceWorker' in navigator) {
-          window.addEventListener('load', function() {
-              navigator.serviceWorker.register('service-worker.js').then(function(registration) {
-                  // Registration was successful
-                  console.log('ServiceWorker registration successful with scope: ', registration.scope);
-              }, function(err) {
-                  // registration failed :(
-                  console.log('ServiceWorker registration failed: ', err);
-              }).catch(function(err) {
-                  console.log(err)
-              });
-          });
-      } else {
-          console.log('service worker is not supported');
-      }
-  </script>
   </body>
 </html>

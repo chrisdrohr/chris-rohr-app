@@ -37,7 +37,7 @@ class Three extends React.Component {
     this.mount.appendChild(renderer.domElement);
     //ADD LIGHT
     const light = new THREE.AmbientLight(0x404040, 0.001);
-    scene.add(light);
+    // scene.add(light);
 
     for (var i = 0; i < 500; i++) {
       let geometry = new THREE.SphereBufferGeometry(3, 10, 10);

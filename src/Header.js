@@ -1,12 +1,15 @@
 import React from 'react';
 import $ from 'jquery';
 import {
+  AppBar,
   BottomNavigation,
   BottomNavigationAction,
   Hidden,
   Toolbar,
   withStyles
 } from '@material-ui/core';
+import Snack from './Custom/Snack';
+import Links from './Components/Links';
 import { withRouter } from 'react-router-dom';
 import LinkButton from './Custom/LinkButton';
 import { links } from './Constants';
@@ -15,35 +18,17 @@ import Logo from './logo';
 const styles = ({
   breakpoints,
   palette,
+  shadows,
   transitions: { create, duration, easing },
   zIndex
 }) => ({
-  menuButton: {
-    transition: create('transform', duration.short, easing.easeInOut),
-    position: 'fixed',
-    zIndex: zIndex.drawer + 1000,
-    color: palette.common.white,
-    [breakpoints.up('sm')]: {
-      top: 16,
-      right: 16
-    },
-    [breakpoints.down('xs')]: {
-      top: 16,
-      right: 16
-    }
-  },
-  logo: {
-    position: 'fixed',
-    top: 16,
-    left: 16,
-    height: '2.5rem'
-  },
+
+ 
   header: {
-    position: 'fixed',
-    top: 0,
-    right: 0,
-    left: 0,
-    zIndex: zIndex.appBar
+    [breakpoints.up('md')]: {
+      backgroundColor: 'transparent',
+      boxShadow: shadows[0],
+    }
   },
   nav: {
     zIndex: zIndex.appBar,
@@ -51,6 +36,18 @@ const styles = ({
     bottom: 0,
     right: 0,
     left: 0
+  },
+  skipLink: {
+    position: 'absolute',
+    top: -40,
+    left: 0,
+    color: 'white',
+    backgroundColor: palette.primary.main,
+    padding: 8,
+    zIndex: 100,
+    '&:focus': {
+      top: 0,
+    }
   },
   toolbar: {
     justifyContent: 'flex-end'
@@ -67,9 +64,9 @@ class Header extends React.Component {
 
   componentDidMount() {
     Object.values(links).map(async item => {
-      this[item.name] = await document.getElementById(item.url);
+      this[item.name] = await document.getElementById(item.name);
     });
-    $(document).ready(() => this.setState({ show: true }));
+  
   }
   componentDidUpdate(prevProps) {
     const props = this.props;
@@ -92,6 +89,15 @@ class Header extends React.Component {
       }
     }
   }
+  openSnack = message => {
+    this.setState({ show: true, message });
+  };
+  closeSnack = (event, reason) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+    this.setState({ show: false });
+  };
   handleScroll = item => {
     const isSmall = this.props.width === 'xs' || this.props.width === 'sm';
     const element = this[item.name];
@@ -144,7 +150,7 @@ class Header extends React.Component {
     ];
     return (
       <React.Fragment>
-        <BottomNavigation value={state.selected} className={props.classes.nav}>
+        <BottomNavigation showLabels value={state.selected} className={props.classes.nav}>
           {Object.values(links).map((item, i) => (
             <BottomNavigationAction
               onClick={() => this.handleScroll(item)}
@@ -162,22 +168,34 @@ class Header extends React.Component {
   render() {
     const props = this.props;
     const state = this.state;
+    const isMobile = props.width === 'xs';
     return (
-      <header className={props.classes.header}>
+      <React.Fragment>
+          <Snack
+          onClose={this.closeSnack}
+          open={state.show}
+          message={state.message}
+        />
+      <AppBar 
+      color={'default'} 
+      className={props.classes.header}>
         <Toolbar
           className={props.classes.toolbar}
           id={'appBar'}
           variant={'dense'}>
-          <Logo show={state.show} className={props.classes.logo} />
-          <Hidden xsDown>
+          <Logo className={props.classes.logo} />
+          <a className={props.classes.skipLink} href={"#mainContent"}>Skip to main content</a>
+          <Hidden smDown>
             <this.Links />
           </Hidden>
+          <Links isMobile={isMobile} handleOpen={this.openSnack} />             
         </Toolbar>
-        <Hidden smUp>
+        <Hidden mdUp>
           <this.Nav />
         </Hidden>
         {props.children}
-      </header>
+      </AppBar>
+      </React.Fragment>
     );
   }
 }

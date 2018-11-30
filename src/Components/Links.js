@@ -22,9 +22,9 @@ const styles = ({
     left: 16,
     top: 'calc(50% - 184px / 2)',
     flexDirection: 'column-reverse',
-    [breakpoints.down('xs')]: {
+    [breakpoints.down('sm')]: {
       flexDirection: 'row',
-      top: 8,
+      top: -4,
       right: 16,
       left: 'auto'
     }

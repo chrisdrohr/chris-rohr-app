@@ -14,9 +14,7 @@ import {
 } from '@material-ui/core';
 import { profile, hobbiesInterests, personality } from '../Constants';
 import { KeyboardArrowDown } from '@material-ui/icons';
-import Snack from '../Custom/Snack';
 import OverlayCard from '../Custom/OverlayCard';
-import Links from '../Components/Links';
 import GrowDialog from '../Custom/GrowDialog';
 import DisplayAvatar from '../Custom/DisplayAvatar';
 import { toRenderProps, withState } from 'recompose';
@@ -47,9 +45,10 @@ const styles = ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
+    boxShadow: shadows[0],
     backgroundColor: 'transparent',
     [breakpoints.down('xs')]: {
-      marginTop: 32,
+      // marginTop: 64,
     }
   },
   description: {
@@ -99,9 +98,7 @@ class Profile extends React.Component {
       this[id] = element.getBoundingClientRect();
     });
   };
-  openSnack = message => {
-    this.setState({ show: true, message });
-  };
+  
   handleOpen = (componentKey, title) => {
     this.setState({
       dialogTitle: title,
@@ -112,12 +109,7 @@ class Profile extends React.Component {
   handleClose = () => {
     this.setState({ open: false });
   };
-  closeSnack = (event, reason) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    this.setState({ show: false });
-  };
+
   Personality = ({ display }) => {
     const props = this.props;
     const Content = () => (
@@ -125,7 +117,7 @@ class Profile extends React.Component {
         {!display && (
           <Typography variant={'caption'}>{personality.subtitle}</Typography>
         )}
-        <List style={{ height: display ? 150 : undefined }}>
+        <List>
           {personality.results.map(result => (
             <CollapseState key={result.title}>
               {({ show, update }) => (
@@ -206,7 +198,7 @@ class Profile extends React.Component {
   HobbiesInterests = ({ display }) => {
     const props = this.props;
     const Content = () => (
-      <CardContent style={{ height: display ? 150 : undefined }}>
+      <CardContent>
         <Grid
           style={{ height: '100%' }}
           container
@@ -277,12 +269,7 @@ class Profile extends React.Component {
     const isMobile = props.width === 'xs';
     return (
       <Container noMargin={!isMobile} className={props.classes.container}>
-            <Links isMobile={isMobile} handleOpen={this.openSnack} />       
-        <Snack
-          onClose={this.closeSnack}
-          open={state.show}
-          message={state.message}
-        />
+      
         <GrowDialog
           dimensions={
             state.componentKey === 'personality'
@@ -300,7 +287,9 @@ class Profile extends React.Component {
         </GrowDialog>
         <Grid container spacing={16}>
           <Grid item md={6} xs={12}>
-            <DisplayAvatar src={profile.photoURL} />
+            <DisplayAvatar 
+            src={profile.photoURL.png}
+            srcWebP={profile.photoURL.webp} />
             <Typography
               className={props.classes.title}
               align={'center'}
@@ -317,6 +306,26 @@ class Profile extends React.Component {
             </Typography>
           </Grid>
           <Grid item md={6} xs={12}>
+          <div style={{width: 350}}>
+            </div>
+          {/* {[
+                <CardContent>
+                <Typography
+                    className={props.classes.description}
+                    align={'left'}
+                    variant={'subtitle1'}>
+                    {profile.summary[1]}
+                  </Typography>
+                </CardContent>,
+                <this.Personality />,
+                <this.HobbiesInterests />
+
+          ].map((c, i) => (
+          <Card 
+          style={{
+            position: 'absolute',
+            transform: 'translate3d('+(i * 10)+'px, '+(i * 10)+'px, '+(i * 10)+'px)',
+            }}>{c}</Card>))} */}
           <Card>
           <CardContent>
           <Typography
@@ -326,14 +335,13 @@ class Profile extends React.Component {
               {profile.summary[1]}
             </Typography>
           </CardContent>
-     
           </Card>
          
             <Grid style={{ paddingTop: 8 }} container spacing={16}>
-              <Grid item xs={6}>
+              <Grid item sm={6} xs={12}>
                 <this.Personality display={true} />
               </Grid>
-              <Grid item xs={6}>
+              <Grid item sm={6} xs={12}>
                 <this.HobbiesInterests display={true} />
               </Grid>
             </Grid>

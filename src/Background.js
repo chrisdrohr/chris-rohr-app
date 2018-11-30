@@ -1,5 +1,5 @@
 import React from 'react';
-import { withStyles } from '@material-ui/core/styles';
+import { withStyles, withWidth } from '@material-ui/core';
 
 const styles = ({
   breakpoints,
@@ -54,8 +54,8 @@ const Sky = props => {
     },
     width
   } = props;
-  const isMobile = width === 'xs';
-  const pixels = isMobile ? 400 : values[width];
+  const value = values[width];
+  const pixels = value === 0 ? 600 : value;
   let i = 0;
   let qty = [];
   for (i; i < pixels; i++) {
@@ -144,112 +144,6 @@ const Sky = props => {
             </feMerge>
           </filter>
         </defs>
-        {/* <g>
-          {['shadow', 'moonGlow'].map((filter, i) => (
-            <circle
-              key={i}
-              // cx={x+"%"}
-              // cy={y+"%"}
-              cx={'50%'}
-              cy={'40%'}
-              r={isMobile ? '12%' : '8%'}
-              fill={'white'}
-              filter={'url(#' + filter + ')'}
-            />
-          ))}
-          {[
-            {
-              cx: 'calc(80% - '+ (isMobile ? 40 : 80) +'px)',
-              cy: 'calc(20% - '+ (isMobile ? 10 : 30) +'px)',
-              r: isMobile ? '1%' : '0.5%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-          
-            {
-              cx: 'calc(80% - '+ (isMobile ? 25 : 35) +'px)',
-              cy: 'calc(20% - '+ (isMobile ? 35 : 50) +'px)',
-              r: isMobile ? '3%' : '2%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-        
-            {
-              cx: 'calc(80% - '+ (isMobile ? 2.5 : 5) +'px)',
-              cy: 'calc(20% - '+ (isMobile ? 1 : 2) +'px)',
-              r: isMobile ? '1.2%' : '0.6%',
-              fill: 'rgba(0, 0, 0, 0.05)'
-            },
-            {
-              cx: 'calc(80% + '+ (isMobile ? 50 : 80) +'px)',
-              cy: 'calc(20% + 30px)',
-              r: isMobile ? '1%' : '0.5%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-            {
-              cx: 'calc(80% + 20px)',
-              cy: 'calc(20% + 60px)',
-              r: isMobile ? '0.6%' : '0.3%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-            {
-              cx: 'calc(80% + 25px)',
-              cy: 'calc(20% + 23px)',
-              r: isMobile ? '0.8%' : '0.4%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-            {
-              cx: 'calc(80% + 45px)',
-              cy: 'calc(20% + 2px)',
-              r: isMobile ? '1.2%' : '0.6%',
-              fill: 'rgba(0, 0, 0, 0.05)'
-            },
-            {
-              cx: 'calc(80% - '+ (isMobile ? 50 : 80) +'px)',
-              cy: 'calc(20% + 30px)',
-              r: isMobile ? '1%' : '0.5%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-            {
-              cx: 'calc(80% - 20px)',
-              cy: 'calc(20% + '+ (isMobile ? 55 : 65) +'px)',
-              r: isMobile ? '1.2%' : '0.8%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-            {
-              cx: 'calc(80% - 25px)',
-              cy: 'calc(20% + 23px)',
-              r: isMobile ? '0.8%' : '0.4%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-           
-            {
-              cx: 'calc(80% + '+ (isMobile ? 15 : 25) +'px)',
-              cy: 'calc(20% - '+ (isMobile ? 55 : 75) +'px)',
-              r: isMobile ? '1%' : '1%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-            {
-              cx: 'calc(80% + 32px)',
-              cy: 'calc(20% - 45px)',
-              r: isMobile ? '0.6%' : '0.4%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-            {
-              cx: 'calc(80% + '+ (isMobile ? 25 : 65) +'px)',
-              cy: 'calc(20% - 32px)',
-              r: isMobile ? '0.8%' : '0.6%',
-              fill: 'rgba(0, 0, 0, 0.1)'
-            },
-          ].map((item, i) => (
-            <circle
-              key={i}
-              cx={item.cx}
-              cy={item.cy}
-              r={item.r}
-              fill={item.fill}
-              //  filter={"url(#" + filter + ")"}
-            />
-          ))}
-        </g> */}
       </svg>
     </g>
   );
@@ -262,14 +156,7 @@ class Background extends React.Component {
       in: false
     };
   }
-  componentDidMount() {
-    // setTimeout(() => this.setState({in: true}), 500);
 
-    // const element = document.getElementById('background');
-    // if (element !== null) {
-    //   element.style.opacity = 1
-    // }
-  }
   render() {
     const { classes } = this.props;
     return (
@@ -281,4 +168,4 @@ class Background extends React.Component {
     );
   }
 }
-export default withStyles(styles, { withTheme: true })(Background);
+export default withWidth()(withStyles(styles, { withTheme: true })(Background))

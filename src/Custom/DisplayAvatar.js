@@ -9,6 +9,7 @@ const styles = ({
   breakpoints,
   palette,
   shadows,
+  spacing,
   transitions: { create, duration, easing }
 }) => ({
   loading: {
@@ -52,6 +53,7 @@ const styles = ({
   layer1: {
     boxShadow: shadows[2],
     display: 'flex',
+    justifyContent: 'center',
     alignItems: 'center',
     width: 270,
     height: 270,
@@ -66,6 +68,7 @@ const styles = ({
     }
   },
   image: {
+    marginTop: spacing.unit / 2,
     height: 250,
     width: 250,
     boxShadow: shadows[4],
@@ -77,7 +80,6 @@ const styles = ({
     margin: 'auto',
     objectFit: 'cover',
     [breakpoints.down('xs')]: {
-      borderWidth: 4,
       height: 115,
       width: 115
     }
@@ -89,21 +91,22 @@ const DisplayAvatar = props => {
       {({ loaded, onLoad }) => (
         <div className={props.classes.root}>
           <div className={props.classes.layer2}>
-            <div
-              className={props.classes.layer1}>
+            <div className={props.classes.layer1}>
               {props.src && (
-                <img
-                  alt={props.alt}
-                  src={props.src}
-                  style={props.style}
-                  onLoad={() => onLoad(true)}
-                  className={classnames({
-                    [props.classes.image]: true,
-                    [props.classes.loading]: !loaded,
-                    [props.classes.loaded]: loaded,
-                    [props.className]: Boolean(props.className)
-                  })}
-                />
+                <picture>
+                  <source type="image/webp" srcSet={props.srcWebP} />
+                  <img
+                    alt={props.alt}
+                    onLoad={() => onLoad(true)}
+                    className={classnames({
+                      [props.classes.image]: true,
+                      [props.classes.loading]: !loaded,
+                      [props.classes.loaded]: loaded,
+                      [props.className]: Boolean(props.className)
+                    })}
+                    data-src={props.src}
+                  />
+                </picture>
               )}
             </div>
           </div>

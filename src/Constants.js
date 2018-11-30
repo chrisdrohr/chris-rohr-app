@@ -156,7 +156,7 @@ export const resume = {
   info: 'View Resume In New Tab',
   title: 'Resume',
   url:
-    'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/Resume.pdf?alt=media&token=269ae012-a9e3-4b83-b5c1-a02b0f5521f7'
+    'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/Resume.pdf?alt=media&token=67b7b6c5-0930-4987-a37e-9be9b11cfb78'
 };
 export const code = {
   info: 'View Code at GitHub',
@@ -168,8 +168,10 @@ export const music = [
   'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/232367631&color=%2303a9f4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
   'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/209258452&color=%2303a9f4&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'
 ];
-export const photoURL =
-  'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/GA-7954-01-2-01-min.jpeg?alt=media&token=bc691d49-3ee9-4fbf-be8d-f89e7bd6e934';
+export const photoURL = {
+    png: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/GA-7954-01-2-01-min.jpeg?alt=media&token=bc691d49-3ee9-4fbf-be8d-f89e7bd6e934',
+    webp: 'https://firebasestorage.googleapis.com/v0/b/chris-rohr.appspot.com/o/webp%2Favatar.webp?alt=media&token=a323c7c8-f6f8-4110-afb5-2c2dcb462a89'
+}
 export const headline = [
   'React',
   'Flow',

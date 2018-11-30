@@ -72,8 +72,11 @@ class Portfolio extends React.Component {
     interval: null
   };
   componentDidMount() {
-    let interval = setInterval(this.count, 4000)
-    this.setState({ interval: interval });
+    setTimeout(async () => {
+         let interval = await setInterval(this.count, 4000)
+    await this.setState({ interval: interval });
+    }, 10000)
+ 
   }
   // componentDidUpdate(prevProps) {
   //   if (this.state.interval === null && this.props.visible) {

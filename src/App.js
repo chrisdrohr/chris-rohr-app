@@ -5,8 +5,8 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import { lightBlue, pink } from '@material-ui/core/colors';
 import { CssBaseline, withWidth } from '@material-ui/core';
 import Body from './Body';
-import { database } from './firebase';
-import { prod } from './Constants';
+// import { database } from './firebase';
+import { prod, links } from './Constants';
 import Freelance from './Components/Freelance';
 import './App.css';
 import Background from './Background';
@@ -25,9 +25,19 @@ const theme = createMuiTheme({
     useNextVariants: true
   },
   overrides: {
+    MuiAppBar: {
+      colorDefault: {
+        backgroundColor: '#112'
+      }
+    },
     MuiPaper: {
       root: {
         backgroundColor: 'rgba(17, 17, 34, 0.9)'
+      }
+    },
+    MuiBottomNavigation: {
+      root: {
+        backgroundColor: '#112'
       }
     },
     MuiBottomNavigationAction: {
@@ -37,43 +47,54 @@ const theme = createMuiTheme({
     }
   }
 });
-let ticking = false;
+
 class App extends Component {
   state = {
     components: [],
     profile: false,
     resume: false,
     portfolio: false,
-    music: false
+    music: false,
+    webGL: false
   };
 
   setComponents = components => {
     this.setState({ components: components });
   };
   componentDidMount() {
-    window.scrollTo(0, 0)
-    document.addEventListener(
-      'scroll',
-      () => this.onScroll(this.state.components),
-      false
-    );
-    if (prod) {
-      this.addVisitor();
-    }
+    this.detectWebGL();
+    window.addEventListener('load', () => {
+      document.documentElement.scrollY = 0;
+      this.observe();
+      this.observeComponents();
+    });
+    // document.addEventListener(
+    //   'scroll',
+    //   () => this.onScroll(this.state.components),
+    //   false
+    // );
+    // if (prod) {
+    //   this.addVisitor();
+    // }
   }
-  onScroll(components) {
-    if (components.length !== 0) {
-      requestAnimationFrame(() => {
-        // console.log(components[0].height / 2 > window.scrollY, components[0].bottom > window.scrollY);
-        // console.log('resume', components[1].top - 200 < window.scrollY, components[1].bottom, components[1].bottom - 200 > window.scrollY);
-        // console.log('resume', components[2].top - 200 < window.scrollY, components[2].bottom > window.scrollY);
-
-        if (
-          !this.state.profile &&
-          components[0].height / 2 > window.scrollY &&
-          components[0].bottom > window.scrollY
-        ) {
-          this.setState(
+  observe = () => {
+    const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.5
+    };
+    this.observer = new IntersectionObserver(this.callback, options);
+  };
+  callback = (entries, observer) => {
+    const state = this.state;
+    entries.forEach(async entry => {
+      const { target, isIntersecting } = entry;
+      // console.log(target.id, isIntersecting);
+      switch (true) {
+        case target.id === links.profile.name &&
+          isIntersecting &&
+          !state.profile:
+          await this.setState(
             {
               profile: true,
               resume: false,
@@ -82,13 +103,9 @@ class App extends Component {
             },
             // () => console.log('Profile is visible')
           );
-        }
-        if (
-          !this.state.resume &&
-          components[1].top - 200 < window.scrollY &&
-          components[1].bottom - 200 > window.scrollY
-        ) {
-          this.setState(
+          break;
+        case target.id === links.resume.name && isIntersecting && !state.resume:
+          await this.setState(
             {
               profile: false,
               resume: true,
@@ -97,13 +114,11 @@ class App extends Component {
             },
             // () => console.log('Resume is visible')
           );
-        }
-        if (
-          !this.state.portfolio &&
-          components[2].top - 200 < window.scrollY &&
-          components[2].bottom - 200 > window.scrollY
-        ) {
-          this.setState(
+          break;
+        case target.id === links.portfolio.name &&
+          isIntersecting &&
+          !state.portfolio:
+          await this.setState(
             {
               profile: false,
               resume: false,
@@ -112,13 +127,9 @@ class App extends Component {
             },
             // () => console.log('Portfolio is visible')
           );
-        }
-        if (
-          !this.state.music &&
-          components[3].top - 200 < window.scrollY &&
-          components[3].bottom - 200 > window.scrollY
-        ) {
-          this.setState(
+          break;
+        case target.id === links.music.name && isIntersecting && !state.music:
+          await this.setState(
             {
               profile: false,
               resume: false,
@@ -127,24 +138,43 @@ class App extends Component {
             },
             // () => console.log('Music is visible')
           );
-        }
-        ticking = false;
-      });
-      ticking = true;
-    }
-  }
-  addVisitor = async () => {
-    const data = {
-      device: window.navigator.platform,
-      date: new Date(Date.now()).toDateString()
-    };
-    await database()
-      .ref('visits')
-      .push(data);
+          break;
+        default: return null;
+      }
+    });
   };
+  observeComponents = async () => {
+    await Object.values(links).map(async item => {
+      this[item.name] = await document.getElementById(item.name);
+      await this.observer.observe(this[item.name]);
+    });
+  };
+  detectWebGL = () => {
+    const canvas = document.createElement('canvas');
+    const gl =
+      canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (gl && gl instanceof WebGLRenderingContext) {
+      console.log('Your browser supports WebGL');
+      this.setState({ webGL: true });
+    } else {
+      console.log('Your browser does not support WebGL');
+      this.setState({ webGL: false });
+    }
+  };
+ 
+  // addVisitor = async () => {
+  //   const data = {
+  //     device: window.navigator.platform,
+  //     date: new Date(Date.now()).toDateString()
+  //   };
+  //   await database()
+  //     .ref('visits')
+  //     .push(data);
+  // };
 
   render() {
     const state = this.state;
+    const props = this.props;
     const page = {
       profile: state.profile,
       resume: state.resume,
@@ -156,15 +186,19 @@ class App extends Component {
         <CssBaseline />
         <MuiThemeProvider theme={theme}>
           <Router history={history}>
-            <main className="App">
+            <div className="App">
               <Switch>
                 <Route
                   exact
                   path={'/'}
                   render={() => (
                     <React.Fragment>
-                      <Scene page={page} width={this.props.width} />
-                      <Header page={page} width={this.props.width} />
+                      {state.webGL && props.width !== 'xs' ? (
+                        <Scene width={props.width} />
+                      ) : (
+                        <Background />
+                      )}
+                      <Header page={page} width={props.width} />
                       <Body
                         page={page}
                         setComponents={this.setComponents}
@@ -184,7 +218,7 @@ class App extends Component {
                   )}
                 />
               </Switch>
-            </main>
+            </div>
           </Router>
         </MuiThemeProvider>
       </React.Fragment>

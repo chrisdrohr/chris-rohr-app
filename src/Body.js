@@ -26,7 +26,7 @@ const styles = ({
     alignItems: 'center',
     justifyContent: 'center',
     minHeight: height,
-    padding: 8,
+    padding: '48px 8px',
     [breakpoints.down('xs')]: {
       paddingBottom: 56
     }
@@ -69,34 +69,22 @@ const styles = ({
   }
 });
 
-let components = [];
 class Body extends Component {
 
-  componentDidMount() {
-    this.getDimensions();
-  }
-  getDimensions = async () => {
-    await Object.values(links).map(async item => {
-      this[item.name] = await document.getElementById(item.url);
-      const dimensions = this[item.name].getBoundingClientRect();
-      components.push(dimensions);
-    });
-    await this.props.setComponents(components);
-  };
   render() {
     const props = this.props;
 
     return (
-      <div id={'container'}>
+      <main id={'mainContent'}>
           {Object.values(links).map(item => (
             <div
-              key={item.url}
-              id={item.url}
+              key={item.name}
+              id={item.name}
               className={props.classes.container}>
-              <item.component key={item.url} visible={props.page[item.name.toLowerCase()]} />
+              <item.component visible={props.page[item.name.toLowerCase()]} width={props.width}/>
             </div>
           ))}
-      </div>
+      </main>
     );
   }
 }

@@ -74,18 +74,22 @@ class MediaCR extends React.PureComponent {
           <React.Fragment>
             <div style={props.rootStyle} className={props.classes.root}>
               {props.src && (
-                <img
-                  alt={props.alt}
-                  src={props.src}
-                  style={props.style}
-                  onLoad={() => onLoad(true)}
-                  className={classnames({
-                    [props.classes.image]: true,
-                    [props.classes.loading]: !loaded || state.change,
-                    [props.classes.loaded]: loaded && !state.change,
-                    [props.className]: Boolean(props.className)
-                  })}
-                />
+                <picture>
+                  <source type="image/webp" srcSet={props.srcWebP} />
+                  <img
+                    alt={props.alt}
+                    src={props.src}
+                    style={props.style}
+                    onLoad={() => onLoad(true)}
+              
+                    className={classnames({
+                      [props.classes.image]: true,
+                      [props.classes.loading]: !loaded || state.change,
+                      [props.classes.loaded]: loaded && !state.change,
+                      [props.className]: Boolean(props.className)
+                    })}
+                  />
+                </picture>
               )}
             </div>
 
