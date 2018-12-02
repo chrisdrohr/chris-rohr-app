@@ -16,6 +16,7 @@ import { profile, hobbiesInterests, personality } from '../Constants';
 import { KeyboardArrowDown } from '@material-ui/icons';
 import OverlayCard from '../Custom/OverlayCard';
 import GrowDialog from '../Custom/GrowDialog';
+import CardStack from '../Custom/CardStack';
 import DisplayAvatar from '../Custom/DisplayAvatar';
 import { toRenderProps, withState } from 'recompose';
 const CollapseState = toRenderProps(withState('show', 'update', false));
@@ -39,6 +40,16 @@ const styles = ({
     margin: '16px auto',
     backgroundColor: palette.primary.main
   },
+  cardStack: {
+    minWidth: 500,
+    minHeight: 500,
+    overflow: 'visible',
+    [breakpoints.down('xs')]: {
+      padding: 16,
+      width: '100vw',
+      minHeight: 500,
+    }
+  },
   container: {
     maxWidth: 1000,
     margin: 'auto',
@@ -52,9 +63,9 @@ const styles = ({
     }
   },
   description: {
-    fontSize: '1.5rem',
+    // fontSize: '1.5rem',
     [breakpoints.down('xs')]: {
-      fontSize: '1rem'
+      // fontSize: '0.75rem'
     }
   },
 
@@ -90,7 +101,7 @@ class Profile extends React.Component {
     message: ''
   };
   componentDidMount() {
-    this.getDimensions();
+    // this.getDimensions();
   }
   getDimensions = async () => {
     await ['personality', 'hobbies'].map(async id => {
@@ -98,7 +109,7 @@ class Profile extends React.Component {
       this[id] = element.getBoundingClientRect();
     });
   };
-  
+
   handleOpen = (componentKey, title) => {
     this.setState({
       dialogTitle: title,
@@ -113,7 +124,7 @@ class Profile extends React.Component {
   Personality = ({ display }) => {
     const props = this.props;
     const Content = () => (
-      <React.Fragment>
+      <CardContent>
         {!display && (
           <Typography variant={'caption'}>{personality.subtitle}</Typography>
         )}
@@ -176,7 +187,7 @@ class Profile extends React.Component {
             </CollapseState>
           ))}
         </List>
-      </React.Fragment>
+      </CardContent>
     );
     return (
       <div>
@@ -206,7 +217,7 @@ class Profile extends React.Component {
           justify={'center'}
           alignItems={'center'}>
           {hobbiesInterests.map(item => (
-            <Grid key={item.name} item md={4} sm={6} xs={6}>
+            <Grid key={item.name} item md={6} sm={6} xs={6}>
               <Card
                 style={{
                   height: display ? 50 : undefined,
@@ -269,7 +280,6 @@ class Profile extends React.Component {
     const isMobile = props.width === 'xs';
     return (
       <Container noMargin={!isMobile} className={props.classes.container}>
-      
         <GrowDialog
           dimensions={
             state.componentKey === 'personality'
@@ -287,9 +297,10 @@ class Profile extends React.Component {
         </GrowDialog>
         <Grid container spacing={16}>
           <Grid item md={6} xs={12}>
-            <DisplayAvatar 
-            src={profile.photoURL.png}
-            srcWebP={profile.photoURL.webp} />
+            <DisplayAvatar
+              src={profile.photoURL.png}
+              srcWebP={profile.photoURL.webp}
+            />
             <Typography
               className={props.classes.title}
               align={'center'}
@@ -306,27 +317,25 @@ class Profile extends React.Component {
             </Typography>
           </Grid>
           <Grid item md={6} xs={12}>
-          <div style={{width: 350}}>
-            </div>
-          {/* {[
-                <CardContent>
+            <CardStack
+              titles={['Summary', 'Personality', 'Interests']}
+              width={props.width}
+              className={props.classes.cardStack}>
+              <CardContent>
                 <Typography
-                    className={props.classes.description}
-                    align={'left'}
-                    variant={'subtitle1'}>
+                  className={props.classes.description}
+                  align={'left'}
+                  variant={'body1'}>
+                    {profile.summary[0]}
                     {profile.summary[1]}
-                  </Typography>
-                </CardContent>,
-                <this.Personality />,
-                <this.HobbiesInterests />
+                  {profile.summary[2]}
+                </Typography>
+              </CardContent>
+              <this.Personality />
+              <this.HobbiesInterests />
+            </CardStack>
 
-          ].map((c, i) => (
-          <Card 
-          style={{
-            position: 'absolute',
-            transform: 'translate3d('+(i * 10)+'px, '+(i * 10)+'px, '+(i * 10)+'px)',
-            }}>{c}</Card>))} */}
-          <Card>
+            {/* <Card>
           <CardContent>
           <Typography
               className={props.classes.description}
@@ -344,7 +353,7 @@ class Profile extends React.Component {
               <Grid item sm={6} xs={12}>
                 <this.HobbiesInterests display={true} />
               </Grid>
-            </Grid>
+            </Grid> */}
           </Grid>
         </Grid>
       </Container>

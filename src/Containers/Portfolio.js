@@ -135,7 +135,8 @@ class Portfolio extends React.Component {
                         <Img
                           alt={item.name}
                           className={props.classes.image}
-                          src={item.images[state.count]}>
+                          src={item.images[state.count].png}
+                          srcWebP={item.images[state.count].webp}>
                           <CardHeader
                             style={{ alignItems: 'flex-start' }}
                             classes={{
