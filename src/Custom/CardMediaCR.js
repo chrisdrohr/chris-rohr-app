@@ -81,7 +81,6 @@ class MediaCR extends React.PureComponent {
                     src={props.src}
                     style={props.style}
                     onLoad={() => onLoad(true)}
-              
                     className={classnames({
                       [props.classes.image]: true,
                       [props.classes.loading]: !loaded || state.change,
@@ -93,7 +92,9 @@ class MediaCR extends React.PureComponent {
               )}
             </div>
 
-            <div className={props.classes.content}>{props.children}</div>
+            {Boolean(props.children) && (
+              <div className={props.classes.content}>{props.children}</div>
+            )}
           </React.Fragment>
         )}
       </State>

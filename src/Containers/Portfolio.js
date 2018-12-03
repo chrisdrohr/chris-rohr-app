@@ -3,6 +3,7 @@ import Container from '../Custom/Container';
 import Subheader from '../Custom/Subheader';
 import Img from '../Custom/CardMediaCR';
 import { profile, links } from '../Constants';
+import Cube from '../Custom/Cube';
 import {
   Card,
   CardHeader,
@@ -15,7 +16,18 @@ import { Launch } from '@material-ui/icons';
 import { toRenderProps, withState } from 'recompose';
 const State = toRenderProps(withState('show', 'handleChange', false));
 
-const height = (window.innerHeight - 96) / 2 - 64;
+const maxWidth = 1000;
+const padding = 8;
+const height = {
+  normal: 300 - padding,
+  sm: (window.innerHeight - 96) / 2 - 96,
+  xs: window.innerWidth - 96
+};
+const width = {
+  normal: (maxWidth - 56) / 2 - padding,
+  sm: window.innerWidth / 2 - 32,
+  xs: window.innerWidth - 48
+};
 const styles = ({
   breakpoints,
   palette,
@@ -26,29 +38,30 @@ const styles = ({
   zIndex
 }) => ({
   card: {
-    width: '100%',
+    width: width.normal,
     position: 'relative',
-    height: height,
-    transition: create('backgroundColor', duration.short, easing.easeOut),
+    height: height.normal,
+    // transition: create('backgroundColor', duration.short, easing.easeOut),
+    [breakpoints.down('sm')]: {
+      width: width.sm,
+      height: height.sm
+    },
     [breakpoints.down('xs')]: {
-      height: 300
+      height: height.xs,
+      width: width.xs
     }
   },
-  cardReveal: {
-    width: '100%',
-    height: 'fit-content',
-    position: 'absolute',
-    top: '100%',
-    willChange: 'transform',
-    transition: create('transform', duration.short, easing.easeOut)
-  },
+
   header: {
     position: 'relative'
   },
   image: {
-    height: height,
+    height: height.normal,
+    [breakpoints.down('sm')]: {
+      height: height.sm
+    },
     [breakpoints.down('xs')]: {
-      height: 300
+      height: height.xs
     }
   },
   moreTitle: {
@@ -73,10 +86,9 @@ class Portfolio extends React.Component {
   };
   componentDidMount() {
     setTimeout(async () => {
-         let interval = await setInterval(this.count, 4000)
-    await this.setState({ interval: interval });
-    }, 10000)
- 
+      let interval = await setInterval(this.count, 5000);
+      await this.setState({ interval: interval });
+    }, 100);
   }
   // componentDidUpdate(prevProps) {
   //   if (this.state.interval === null && this.props.visible) {
@@ -94,12 +106,12 @@ class Portfolio extends React.Component {
   count = () => {
     const state = this.state;
     requestAnimationFrame(() => {
-      if (state.count > 1) {
+      if (state.count >= 4) {
         this.setState({ count: 0 });
       } else {
         this.setState({ count: state.count + 1 });
       }
-    })
+    });
   };
 
   render() {
@@ -107,14 +119,26 @@ class Portfolio extends React.Component {
     const state = this.state;
 
     const { primary, secondary } = props.theme.palette;
-    const colors = [
-      primary.dark,
+    const colors1 = [
       secondary.light,
+      primary.dark,
       secondary.main,
       primary.main,
       secondary.dark,
       primary.light
     ];
+    const colors2 = [
+      secondary.main,
+      primary.dark,
+
+      secondary.light,
+      primary.light,
+
+      secondary.dark,
+
+      primary.main
+    ];
+
     return (
       <Container noMargin={props.width !== 'xs'}>
         <Subheader icon={<links.portfolio.icon />}>
@@ -126,7 +150,7 @@ class Portfolio extends React.Component {
             .filter((item, i) => i < 4)
             .map((item, i) => (
               <Grid item key={i} sm={6} xs={12}>
-                <State>
+                {/* <State>
                   {({ show, handleChange }) => (
                     <Card
                       style={{ backgroundColor: colors[i + state.count] }}
@@ -160,6 +184,63 @@ class Portfolio extends React.Component {
                         </Img>
                       )}
                     </Card>
+                  )}
+                </State> */}
+                <State>
+                  {({ show, handleChange }) => (
+                    <Cube
+                      idValue={`${i}Cube`}
+                      delay={i * 300}
+                      width={props.width}
+                      // index={0}
+                      index={state.count}
+                      content={
+                        <React.Fragment>
+                          <CardHeader
+                            style={{ alignItems: 'flex-start' }}
+                            classes={{
+                              title: props.classes.title
+                            }}
+                            action={
+                              <IconButton
+                                color={'secondary'}
+                                style={{ color: 'white' }}
+                                component={'a'}
+                                href={item.link}
+                                target={'_blank'}
+                                variant={'contained'}>
+                                <Launch />
+                              </IconButton>
+                            }
+                            title={item.name}
+                            subheader={item.description}
+                          />
+                          <CardHeader title={'Tech'} subheader={item.tech} />
+                        </React.Fragment>
+                      }>
+                      {item.images.map((url, i) => {
+                        const color1 =
+                          i === 0 ? colors1.reverse()[i] : colors1[i];
+                        const color2 =
+                          i === 2 ? colors2.reverse()[i + 1] : colors2[i + 1];
+                        return (
+                          <Card
+                            style={{
+                              backgroundColor: i > 1 ? color1 : color2
+                            }}
+                            className={props.classes.card}>
+                            {Boolean(url.png) && (
+                              <Img
+                                alt={item.name}
+                                className={props.classes.image}
+                                src={url.png}
+                                srcWebP={url.webp}
+                              />
+                            )}
+                          </Card>
+                        );
+                      })}
+                    </Cube>
                   )}
                 </State>
               </Grid>

@@ -47,7 +47,7 @@ const styles = ({
     [breakpoints.down('xs')]: {
       padding: 16,
       width: '100vw',
-      minHeight: 500,
+      minHeight: 500
     }
   },
   container: {
@@ -257,7 +257,7 @@ class Profile extends React.Component {
       </CardContent>
     );
     return (
-      <div>
+      <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
         {display ? (
           <OverlayCard
             id={'hobbies'}
@@ -266,9 +266,7 @@ class Profile extends React.Component {
             <Content />
           </OverlayCard>
         ) : (
-          <React.Fragment>
-            <Content />
-          </React.Fragment>
+          <Content />
         )}
       </div>
     );
@@ -326,8 +324,8 @@ class Profile extends React.Component {
                   className={props.classes.description}
                   align={'left'}
                   variant={'body1'}>
-                    {profile.summary[0]}
-                    {profile.summary[1]}
+                  {profile.summary[0]}
+                  {profile.summary[1]}
                   {profile.summary[2]}
                 </Typography>
               </CardContent>
