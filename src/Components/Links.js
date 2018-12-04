@@ -109,6 +109,7 @@ const Links = props => {
             component={button.component}
             href={button.href}
             mini={button.mini}
+            rel={'noopener'}
             target={button.target}
             size={button.size}
             style={button.style}

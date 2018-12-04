@@ -78,20 +78,10 @@ const styles = ({
 });
 class Portfolio extends React.Component {
   state = {
-    dialogTitle: '',
-    dimensions: {},
-    open: false,
     count: 0,
     interval: null
   };
-  componentDidMount() {
-    // if(this.props.visible) {
-    //    setTimeout(async () => {
-    //   let interval = await setInterval(this.count, 5000);
-    //   await this.setState({ interval: interval });
-    // }, 100);
-    // }
-  }
+
   componentDidUpdate(prevProps) {
     if (this.props.visible && this.state.interval === null) {
       setTimeout(async () => {
@@ -99,6 +89,7 @@ class Portfolio extends React.Component {
         await this.setState({ interval: interval });
       }, 100);
     } else if (!this.props.visible && this.state.interval !== null) {
+      clearInterval(this.state.interval);
       this.setState({ interval: null, count: 0 });
     }
   }
@@ -152,42 +143,6 @@ class Portfolio extends React.Component {
             .filter((item, i) => i < 4)
             .map((item, i) => (
               <Grid item key={i} sm={6} xs={12}>
-                {/* <State>
-                  {({ show, handleChange }) => (
-                    <Card
-                      style={{ backgroundColor: colors[i + state.count] }}
-                      className={props.classes.card}>
-                      {Boolean(item.images) && (
-                        <Img
-                          alt={item.name}
-                          className={props.classes.image}
-                          src={item.images[state.count].png}
-                          srcWebP={item.images[state.count].webp}>
-                          <CardHeader
-                            style={{ alignItems: 'flex-start' }}
-                            classes={{
-                              title: props.classes.title
-                            }}
-                            action={
-                              <IconButton
-                                color={'secondary'}
-                                style={{ color: 'white' }}
-                                component={'a'}
-                                href={item.link}
-                                target={'_blank'}
-                                variant={'contained'}>
-                                <Launch />
-                              </IconButton>
-                            }
-                            title={item.name}
-                            subheader={item.description}
-                          />
-                          <CardHeader title={'Tech'} subheader={item.tech} />
-                        </Img>
-                      )}
-                    </Card>
-                  )}
-                </State> */}
                 <State>
                   {({ show, handleChange }) => (
                     <Cube
@@ -208,6 +163,7 @@ class Portfolio extends React.Component {
                                 style={{ color: 'white' }}
                                 component={'a'}
                                 href={item.link}
+                                rel={'noopener'}
                                 target={'_blank'}
                                 variant={'contained'}>
                                 <Launch />

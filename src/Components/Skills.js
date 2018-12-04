@@ -95,6 +95,7 @@ class Skills extends Component {
                           className={props.classes.avatar}
                           classes={{ img: props.classes.image }}
                           src={skill.svg}
+                          alt={'icon'}
                         />
                       </ListItemAvatar>
                       <ListItemText

@@ -238,6 +238,7 @@ class Profile extends React.Component {
         <Grid container spacing={16}>
           <Grid item md={6} xs={12}>
             <DisplayAvatar
+            alt={profile.name}
               src={profile.photoURL.png}
               srcWebP={profile.photoURL.webp}
             />
