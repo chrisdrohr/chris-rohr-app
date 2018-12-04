@@ -85,21 +85,23 @@ class Portfolio extends React.Component {
     interval: null
   };
   componentDidMount() {
-    setTimeout(async () => {
-      let interval = await setInterval(this.count, 5000);
-      await this.setState({ interval: interval });
-    }, 100);
+    // if(this.props.visible) {
+    //    setTimeout(async () => {
+    //   let interval = await setInterval(this.count, 5000);
+    //   await this.setState({ interval: interval });
+    // }, 100);
+    // }
   }
-  // componentDidUpdate(prevProps) {
-  //   if (this.state.interval === null && this.props.visible) {
-  //   console.log(this.props)
-
-  //     let interval = setInterval(() => this.count(), 3000);
-  //     this.setState({ interval: interval });
-  //   } else {
-  //     clearInterval(this.state.interval);
-  //   }
-  // }
+  componentDidUpdate(prevProps) {
+    if (this.props.visible && this.state.interval === null) {
+      setTimeout(async () => {
+        let interval = await setInterval(this.count, 5000);
+        await this.setState({ interval: interval });
+      }, 100);
+    } else if (!this.props.visible && this.state.interval !== null) {
+      this.setState({ interval: null, count: 0 });
+    }
+  }
   componentWillUnmount() {
     clearInterval(this.state.interval);
   }
@@ -192,7 +194,6 @@ class Portfolio extends React.Component {
                       idValue={`${i}Cube`}
                       delay={i * 300}
                       width={props.width}
-                      // index={0}
                       index={state.count}
                       content={
                         <React.Fragment>
@@ -225,6 +226,7 @@ class Portfolio extends React.Component {
                           i === 2 ? colors2.reverse()[i + 1] : colors2[i + 1];
                         return (
                           <Card
+                            key={i}
                             style={{
                               backgroundColor: i > 1 ? color1 : color2
                             }}

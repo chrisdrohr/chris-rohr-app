@@ -42,6 +42,7 @@ const styles = ({
     width: width.normal,
     height: height.normal,
     position: 'relative',
+    willChange: 'transform',
     transformStyle: 'preserve-3d',
     [breakpoints.down('sm')]: {
       width: width.sm,
@@ -79,17 +80,18 @@ const styles = ({
     zIndex: 1,
     opacity: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.8)',
+    willChange: 'opacity',
     transition: create('opacity', duration.short, easing.easeOut),
     '&:hover': {
       opacity: 1
     },
     [breakpoints.down('sm')]: {
-      width: width.sm,
-      height: height.sm
+      width: width.sm + 3,
+      height: height.sm + 2
     },
     [breakpoints.down('xs')]: {
-      height: height.xs,
-      width: width.xs
+      height: height.xs + 3,
+      width: width.xs + 2
     }
   }
 });
@@ -160,6 +162,7 @@ class Cube extends React.PureComponent {
             ];
             return (
               <div
+              key={i}
                 style={{
                   transform: transform[i]
                 }}

@@ -1,5 +1,4 @@
 import React from 'react';
-import $ from 'jquery';
 import {
   AppBar,
   BottomNavigation,
@@ -10,6 +9,7 @@ import {
 } from '@material-ui/core';
 import Snack from './Custom/Snack';
 import Links from './Components/Links';
+import { PageConsumer } from './Context';
 import { withRouter } from 'react-router-dom';
 import LinkButton from './Custom/LinkButton';
 import { links } from './Constants';
@@ -22,13 +22,18 @@ const styles = ({
   transitions: { create, duration, easing },
   zIndex
 }) => ({
-
- 
   header: {
     [breakpoints.up('md')]: {
       backgroundColor: 'transparent',
-      boxShadow: shadows[0],
+      boxShadow: shadows[0]
     }
+  },
+  icon: {
+    borderRadius: '50%',
+    borderWidth: 1,
+    borderStyle: 'solid',
+    willChange: 'border-color',
+    transition: create('border-color', duration.enteringScreen, easing.easeIn)
   },
   nav: {
     zIndex: zIndex.appBar,
@@ -46,7 +51,7 @@ const styles = ({
     padding: 8,
     zIndex: 100,
     '&:focus': {
-      top: 0,
+      top: 0
     }
   },
   toolbar: {
@@ -57,7 +62,6 @@ class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: 'Profile',
       show: false
     };
   }
@@ -66,28 +70,6 @@ class Header extends React.Component {
     Object.values(links).map(async item => {
       this[item.name] = await document.getElementById(item.name);
     });
-  
-  }
-  componentDidUpdate(prevProps) {
-    const props = this.props;
-    if (prevProps.page !== props.page) {
-      switch (true) {
-        case props.page.profile:
-          this.setState({ selected: links.profile.name });
-          break;
-        case props.page.resume:
-          this.setState({ selected: links.resume.name });
-          break;
-        case props.page.portfolio:
-          this.setState({ selected: links.portfolio.name });
-          break;
-        case props.page.music:
-          this.setState({ selected: links.music.name });
-          break;
-        default:
-          return null;
-      }
-    }
   }
   openSnack = message => {
     this.setState({ show: true, message });
@@ -102,16 +84,16 @@ class Header extends React.Component {
     const isSmall = this.props.width === 'xs' || this.props.width === 'sm';
     const element = this[item.name];
     if (element !== null) {
-      requestAnimationFrame(() => element.scrollIntoView({
-        behavior: 'smooth',
-        block: isSmall ? 'start' : 'center'
-      }));
-      this.setState({ selected: item.name });
+      requestAnimationFrame(() =>
+        element.scrollIntoView({
+          behavior: 'smooth',
+          block: isSmall ? 'start' : 'center'
+        })
+      );
     }
   };
-  Links = () => {
+  Links = ({ page }) => {
     const props = this.props;
-    const state = this.state;
     const { primary, secondary } = props.theme.palette;
     const colors = [
       primary.dark,
@@ -128,7 +110,7 @@ class Header extends React.Component {
             onClick={() => this.handleScroll(item)}
             color={colors[i]}
             key={item.url}
-            selected={state.selected === item.name}>
+            selected={page === item.name}>
             <item.icon />
             {item.name}
           </LinkButton>
@@ -136,9 +118,8 @@ class Header extends React.Component {
       </React.Fragment>
     );
   };
-  Nav = () => {
+  Nav = ({ page }) => {
     const props = this.props;
-    const state = this.state;
     const { primary, secondary } = props.theme.palette;
     const colors = [
       primary.dark,
@@ -150,16 +131,27 @@ class Header extends React.Component {
     ];
     return (
       <React.Fragment>
-        <BottomNavigation showLabels value={state.selected} className={props.classes.nav}>
-          {Object.values(links).map((item, i) => (
-            <BottomNavigationAction
-              onClick={() => this.handleScroll(item)}
-              key={i}
-              icon={<item.icon style={{color: colors[i]}}/>}
-              value={item.name}
-              label={item.name}
-            />
-          ))}
+        <BottomNavigation showLabels className={props.classes.nav}>
+          {Object.values(links).map((item, i) => {
+            const selected = page === item.name;
+            return (
+              <BottomNavigationAction
+                onClick={() => this.handleScroll(item)}
+                key={i}
+                icon={
+                  <item.icon
+                    className={props.classes.icon}
+                    style={{
+                      borderColor: selected ? 'white' : 'transparent',
+                      color: colors[i]
+                    }}
+                  />
+                }
+                value={item.name}
+                label={item.name}
+              />
+            );
+          })}
         </BottomNavigation>
       </React.Fragment>
     );
@@ -171,30 +163,36 @@ class Header extends React.Component {
     const isMobile = props.width === 'xs';
     return (
       <React.Fragment>
-          <Snack
+        <Snack
           onClose={this.closeSnack}
           open={state.show}
           message={state.message}
         />
-      <AppBar 
-      color={'default'} 
-      className={props.classes.header}>
-        <Toolbar
-          className={props.classes.toolbar}
-          id={'appBar'}
-          variant={'dense'}>
-          <Logo className={props.classes.logo} />
-          <a className={props.classes.skipLink} href={"#mainContent"}>Skip to main content</a>
-          <Hidden smDown>
-            <this.Links />
-          </Hidden>
-          <Links isMobile={isMobile} handleOpen={this.openSnack} />             
-        </Toolbar>
-        <Hidden mdUp>
-          <this.Nav />
-        </Hidden>
-        {props.children}
-      </AppBar>
+        <AppBar color={'default'} className={props.classes.header}>
+          <PageConsumer>
+            {page => (
+              <React.Fragment>
+                <Toolbar
+                  className={props.classes.toolbar}
+                  id={'appBar'}
+                  variant={'dense'}>
+                  <Logo className={props.classes.logo} />
+                  <a className={props.classes.skipLink} href={'#mainContent'}>
+                    Skip to main content
+                  </a>
+                  <Hidden smDown>
+                    <this.Links page={page} />
+                  </Hidden>
+                  <Links isMobile={isMobile} handleOpen={this.openSnack} />
+                </Toolbar>
+                <Hidden mdUp>
+                  <this.Nav page={page} />
+                </Hidden>
+              </React.Fragment>
+            )}
+          </PageConsumer>
+          {props.children}
+        </AppBar>
       </React.Fragment>
     );
   }

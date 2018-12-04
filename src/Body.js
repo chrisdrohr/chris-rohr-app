@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { links } from './Constants';
+import { PageConsumer } from './Context';
 import { withStyles } from '@material-ui/core';
 import { withRouter } from 'react-router-dom';
 
@@ -70,20 +71,27 @@ const styles = ({
 });
 
 class Body extends Component {
-
   render() {
     const props = this.props;
-
     return (
       <main id={'mainContent'}>
-          {Object.values(links).map(item => (
-            <div
-              key={item.name}
-              id={item.name}
-              className={props.classes.container}>
-              <item.component visible={props.page[item.name.toLowerCase()]} width={props.width}/>
-            </div>
-          ))}
+        <PageConsumer>
+          {page => (
+            <React.Fragment>
+              {Object.values(links).map(item => (
+                <div
+                  key={item.name}
+                  id={item.name}
+                  className={props.classes.container}>
+                  <item.component
+                    visible={page === item.name}
+                    width={props.width}
+                  />
+                </div>
+              ))}
+            </React.Fragment>
+          )}
+        </PageConsumer>
       </main>
     );
   }

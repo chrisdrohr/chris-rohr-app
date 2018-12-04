@@ -15,7 +15,6 @@ import {
 import { profile, hobbiesInterests, personality } from '../Constants';
 import { KeyboardArrowDown } from '@material-ui/icons';
 import OverlayCard from '../Custom/OverlayCard';
-import GrowDialog from '../Custom/GrowDialog';
 import CardStack from '../Custom/CardStack';
 import DisplayAvatar from '../Custom/DisplayAvatar';
 import { toRenderProps, withState } from 'recompose';
@@ -44,10 +43,19 @@ const styles = ({
     minWidth: 500,
     minHeight: 500,
     overflow: 'visible',
+    [breakpoints.down('sm')]: {
+      padding: 16,
+      width: '100vw',
+      minHeight: 400,
+      minWidth: window.innerWidth - 32,
+      width: window.innerWidth - 32
+    },
     [breakpoints.down('xs')]: {
       padding: 16,
       width: '100vw',
-      minHeight: 500
+      minHeight: 520,
+      minWidth: window.innerWidth - 32,
+      width: window.innerWidth - 32
     }
   },
   container: {
@@ -58,15 +66,10 @@ const styles = ({
     justifyContent: 'center',
     boxShadow: shadows[0],
     backgroundColor: 'transparent',
-    [breakpoints.down('xs')]: {
-      // marginTop: 64,
-    }
+    [breakpoints.down('xs')]: {}
   },
   description: {
-    // fontSize: '1.5rem',
-    [breakpoints.down('xs')]: {
-      // fontSize: '0.75rem'
-    }
+    [breakpoints.down('xs')]: {}
   },
 
   personalityIcon: {
@@ -95,179 +98,133 @@ const styles = ({
 class Profile extends React.Component {
   state = {
     componentKey: '',
-    dialogTitle: '',
-    open: false,
     show: false,
     message: ''
-  };
-  componentDidMount() {
-    // this.getDimensions();
-  }
-  getDimensions = async () => {
-    await ['personality', 'hobbies'].map(async id => {
-      const element = await document.getElementById(id);
-      this[id] = element.getBoundingClientRect();
-    });
-  };
-
-  handleOpen = (componentKey, title) => {
-    this.setState({
-      dialogTitle: title,
-      componentKey,
-      open: true
-    });
-  };
-  handleClose = () => {
-    this.setState({ open: false });
   };
 
   Personality = ({ display }) => {
     const props = this.props;
-    const Content = () => (
-      <CardContent>
-        {!display && (
-          <Typography variant={'caption'}>{personality.subtitle}</Typography>
-        )}
-        <List>
-          {personality.results.map(result => (
-            <CollapseState key={result.title}>
-              {({ show, update }) => (
-                <Card style={{ margin: '8px 0' }}>
-                  <ListItem
-                    style={{ padding: display ? '5.5px 8px' : undefined }}
-                    button
-                    onClick={() => update(!show)}
-                    key={result.title}>
-                    <div style={{ width: '100%' }}>
-                      <Typography
-                        style={{ fontSize: display ? '0.5rem' : '1rem' }}
-                        variant={'h4'}>
-                        {result.title}
-                      </Typography>
-                      <Typography
-                        style={{ fontSize: display ? '0.375rem' : undefined }}
-                        paragraph
-                        variant={'caption'}>
-                        {result.subtitle}
-                      </Typography>
-                      <LinearProgress
-                        style={{ height: display ? 4 : undefined }}
-                        className={props.classes.progress}
-                        color={result.score > 30 ? 'secondary' : 'primary'}
-                        variant={'determinate'}
-                        value={(result.score * 100) / 60}
-                      />
-                    </div>
 
-                    <KeyboardArrowDown
-                      className={props.classes.personalityIcon}
-                      color={'action'}
-                      style={{
-                        height: display ? 12 : undefined,
-                        width: display ? 12 : undefined,
-                        transform: show ? 'rotate(0deg)' : 'rotate(180deg)'
-                      }}
-                    />
-                  </ListItem>
-                  <Collapse in={show}>
-                    <CardContent style={{ padding: display ? 8 : undefined }}>
-                      {result.description.map((value, i) => (
-                        <Typography
-                          key={i}
-                          paragraph={i === 0}
-                          color={i === 0 ? undefined : 'primary'}
-                          variant={i === 0 ? 'body2' : 'caption'}>
-                          {value}
-                        </Typography>
-                      ))}
-                    </CardContent>
-                  </Collapse>
-                </Card>
-              )}
-            </CollapseState>
-          ))}
-        </List>
-      </CardContent>
-    );
     return (
       <div>
-        {display ? (
-          <OverlayCard
-            id={'personality'}
-            onClick={() => this.handleOpen('personality', personality.title)}
-            title={personality.title}>
-            <Content />
-          </OverlayCard>
-        ) : (
-          <React.Fragment>
-            <Content />
-          </React.Fragment>
-        )}
+        <CardContent>
+          {!display && (
+            <Typography variant={'caption'}>{personality.subtitle}</Typography>
+          )}
+          <List>
+            {personality.results.map(result => (
+              <CollapseState key={result.title}>
+                {({ show, update }) => (
+                  <Card style={{ margin: '8px 0' }}>
+                    <ListItem
+                      style={{ padding: display ? '5.5px 8px' : undefined }}
+                      button
+                      onClick={() => update(!show)}
+                      key={result.title}>
+                      <div style={{ width: '100%' }}>
+                        <Typography
+                          style={{ fontSize: display ? '0.5rem' : '1rem' }}
+                          variant={'h4'}>
+                          {result.title}
+                        </Typography>
+                        <Typography
+                          style={{ fontSize: display ? '0.375rem' : undefined }}
+                          paragraph
+                          variant={'caption'}>
+                          {result.subtitle}
+                        </Typography>
+                        <LinearProgress
+                          style={{ height: display ? 4 : undefined }}
+                          className={props.classes.progress}
+                          color={result.score > 30 ? 'secondary' : 'primary'}
+                          variant={'determinate'}
+                          value={(result.score * 100) / 60}
+                        />
+                      </div>
+
+                      <KeyboardArrowDown
+                        className={props.classes.personalityIcon}
+                        color={'action'}
+                        style={{
+                          height: display ? 12 : undefined,
+                          width: display ? 12 : undefined,
+                          transform: show ? 'rotate(0deg)' : 'rotate(180deg)'
+                        }}
+                      />
+                    </ListItem>
+                    <Collapse in={show}>
+                      <CardContent style={{ padding: display ? 8 : undefined }}>
+                        {result.description.map((value, i) => (
+                          <Typography
+                            key={i}
+                            paragraph={i === 0}
+                            color={i === 0 ? undefined : 'primary'}
+                            variant={i === 0 ? 'body2' : 'caption'}>
+                            {value}
+                          </Typography>
+                        ))}
+                      </CardContent>
+                    </Collapse>
+                  </Card>
+                )}
+              </CollapseState>
+            ))}
+          </List>
+        </CardContent>
       </div>
     );
   };
   HobbiesInterests = ({ display }) => {
     const props = this.props;
-    const Content = () => (
-      <CardContent>
-        <Grid
-          style={{ height: '100%' }}
-          container
-          spacing={16}
-          justify={'center'}
-          alignItems={'center'}>
-          {hobbiesInterests.map(item => (
-            <Grid key={item.name} item md={6} sm={6} xs={6}>
-              <Card
-                style={{
-                  height: display ? 50 : undefined,
-                  width: display ? 50 : undefined
-                }}
-                className={props.classes.card}>
-                <Avatar
-                  style={{
-                    margin: display ? '8px auto' : undefined,
-                    height: display ? 20 : undefined,
-                    width: display ? 20 : undefined
-                  }}
-                  className={props.classes.cardAvatar}>
-                  <item.svg
-                    style={{
-                      color: 'white',
-                      transform: display ? 'scale(0.5)' : undefined
-                    }}
-                  />
-                </Avatar>
-                <Typography
-                  align={'center'}
-                  style={{
-                    margin: 'auto',
-                    width: display ? 50 : 100,
-                    marginTop: display ? 2 : 4,
-                    color: 'white',
-                    fontSize: display ? '0.435rem' : undefined
-                  }}
-                  variant={'subtitle2'}>
-                  {item.name}
-                </Typography>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </CardContent>
-    );
+
     return (
       <div style={{ display: 'flex', alignItems: 'center', height: '100%' }}>
-        {display ? (
-          <OverlayCard
-            id={'hobbies'}
-            onClick={() => this.handleOpen('hobbies', 'Hobbies & Interests')}
-            title={'Hobbies & Interests'}>
-            <Content />
-          </OverlayCard>
-        ) : (
-          <Content />
-        )}
+        <CardContent>
+          <Grid
+            style={{ height: '100%' }}
+            container
+            spacing={16}
+            justify={'center'}
+            alignItems={'center'}>
+            {hobbiesInterests.map(item => (
+              <Grid key={item.name} item md={6} sm={4} xs={6}>
+                <Card
+                  style={{
+                    height: display ? 50 : undefined,
+                    width: display ? 50 : undefined
+                  }}
+                  className={props.classes.card}>
+                  <Avatar
+                    style={{
+                      margin: display ? '8px auto' : undefined,
+                      height: display ? 20 : undefined,
+                      width: display ? 20 : undefined
+                    }}
+                    className={props.classes.cardAvatar}>
+                    <item.svg
+                      style={{
+                        color: 'white',
+                        transform: display ? 'scale(0.5)' : undefined
+                      }}
+                    />
+                  </Avatar>
+                  <Typography
+                    align={'center'}
+                    style={{
+                      margin: 'auto',
+                      width: display ? 50 : 100,
+                      marginTop: display ? 2 : 4,
+                      color: 'white',
+                      fontSize: display ? '0.435rem' : undefined
+                    }}
+                    variant={'subtitle2'}>
+                    {item.name}
+                  </Typography>
+                </Card>
+              </Grid>
+            ))}
+          </Grid>
+        </CardContent>
       </div>
     );
   };
@@ -278,21 +235,6 @@ class Profile extends React.Component {
     const isMobile = props.width === 'xs';
     return (
       <Container noMargin={!isMobile} className={props.classes.container}>
-        <GrowDialog
-          dimensions={
-            state.componentKey === 'personality'
-              ? this.personality
-              : this.hobbies
-          }
-          open={state.open}
-          onClose={this.handleClose}
-          title={state.dialogTitle}>
-          {state.componentKey === 'personality' ? (
-            <this.Personality />
-          ) : (
-            <this.HobbiesInterests />
-          )}
-        </GrowDialog>
         <Grid container spacing={16}>
           <Grid item md={6} xs={12}>
             <DisplayAvatar
@@ -321,6 +263,7 @@ class Profile extends React.Component {
               className={props.classes.cardStack}>
               <CardContent>
                 <Typography
+                  component={'div'}
                   className={props.classes.description}
                   align={'left'}
                   variant={'body1'}>
@@ -332,26 +275,6 @@ class Profile extends React.Component {
               <this.Personality />
               <this.HobbiesInterests />
             </CardStack>
-
-            {/* <Card>
-          <CardContent>
-          <Typography
-              className={props.classes.description}
-              align={'left'}
-              variant={'subtitle1'}>
-              {profile.summary[1]}
-            </Typography>
-          </CardContent>
-          </Card>
-         
-            <Grid style={{ paddingTop: 8 }} container spacing={16}>
-              <Grid item sm={6} xs={12}>
-                <this.Personality display={true} />
-              </Grid>
-              <Grid item sm={6} xs={12}>
-                <this.HobbiesInterests display={true} />
-              </Grid>
-            </Grid> */}
           </Grid>
         </Grid>
       </Container>
